@@ -1,0 +1,12 @@
+{
+  "changedOriginalParts": [
+    "[Content_Types].xml",
+    "ppt/presentation.xml",
+    "ppt/slides/slide2.xml",
+    "ppt/_rels/presentation.xml.rels",
+    "ppt/slides/_rels/slide2.xml.rels"
+  ],
+  "firstSlidePreserved": true,
+  "canvasPreserved": true,
+  "sourceSha256": "28cd4c05b6a1eae600b61e141157dbada62dc97aeb0932ae7c8259e530d9c903"
+}

@@ -1,0 +1,43 @@
+Found 14 validation error(s):
+  [Schema] The element has unexpected child element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:rFonts'.
+    Path: /w:document[1]/w:body[1]/w:p[223]/w:hyperlink[1]/w:r[1]/w:rPr[1]
+    Part: /word/document.xml
+  [Schema] The element has unexpected child element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:rFonts'.
+    Path: /w:document[1]/w:body[1]/w:p[218]/w:hyperlink[1]/w:r[1]/w:rPr[1]
+    Part: /word/document.xml
+  [Schema] The element has unexpected child element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:rFonts'.
+    Path: /w:document[1]/w:body[1]/w:p[217]/w:hyperlink[1]/w:r[1]/w:rPr[1]
+    Part: /word/document.xml
+  [Schema] The element has unexpected child element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:rFonts'.
+    Path: /w:document[1]/w:body[1]/w:p[212]/w:hyperlink[1]/w:r[1]/w:rPr[1]
+    Part: /word/document.xml
+  [Schema] The element has unexpected child element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:rFonts'.
+    Path: /w:document[1]/w:body[1]/w:p[207]/w:hyperlink[1]/w:r[1]/w:rPr[1]
+    Part: /word/document.xml
+  [Schema] The element has unexpected child element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:rFonts'.
+    Path: /w:document[1]/w:body[1]/w:p[202]/w:hyperlink[1]/w:r[1]/w:rPr[1]
+    Part: /word/document.xml
+  [Schema] The element has unexpected child element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:rFonts'.
+    Path: /w:document[1]/w:body[1]/w:p[195]/w:hyperlink[1]/w:r[1]/w:rPr[1]
+    Part: /word/document.xml
+  [Schema] The element has unexpected child element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:rFonts'.
+    Path: /w:document[1]/w:body[1]/w:p[189]/w:hyperlink[1]/w:r[1]/w:rPr[1]
+    Part: /word/document.xml
+  [Schema] The element has unexpected child element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:rFonts'.
+    Path: /w:document[1]/w:body[1]/w:p[183]/w:hyperlink[1]/w:r[1]/w:rPr[1]
+    Part: /word/document.xml
+  [Schema] The element has unexpected child element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:rFonts'.
+    Path: /w:document[1]/w:body[1]/w:p[177]/w:hyperlink[1]/w:r[1]/w:rPr[1]
+    Part: /word/document.xml
+  [Schema] The element has unexpected child element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:rFonts'.
+    Path: /w:document[1]/w:body[1]/w:p[176]/w:hyperlink[1]/w:r[1]/w:rPr[1]
+    Part: /word/document.xml
+  [Schema] The element has unexpected child element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:rFonts'.
+    Path: /w:document[1]/w:body[1]/w:p[170]/w:hyperlink[1]/w:r[1]/w:rPr[1]
+    Part: /word/document.xml
+  [Schema] The element has unexpected child element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:rFonts'.
+    Path: /w:document[1]/w:body[1]/w:p[169]/w:hyperlink[1]/w:r[1]/w:rPr[1]
+    Part: /word/document.xml
+  [Schema] The element has unexpected child element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:rFonts'.
+    Path: /w:document[1]/w:body[1]/w:p[161]/w:hyperlink[1]/w:r[1]/w:rPr[1]
+    Part: /word/document.xml

@@ -1,0 +1,42 @@
+[
+  {
+    "path": "/body/tbl[4]/tr[17]/tc[1]",
+    "props": {
+      "padding.left": "20",
+      "padding.right": "20"
+    },
+    "command": "set"
+  },
+  {
+    "path": "/body/tbl[4]/tr[18]/tc[1]",
+    "props": {
+      "padding.left": "20",
+      "padding.right": "20"
+    },
+    "command": "set"
+  },
+  {
+    "path": "/body/tbl[4]/tr[19]/tc[1]",
+    "props": {
+      "padding.left": "20",
+      "padding.right": "20"
+    },
+    "command": "set"
+  },
+  {
+    "path": "/body/tbl[4]/tr[20]/tc[1]",
+    "props": {
+      "padding.left": "20",
+      "padding.right": "20"
+    },
+    "command": "set"
+  },
+  {
+    "path": "/body/tbl[4]/tr[21]/tc[1]",
+    "props": {
+      "padding.left": "20",
+      "padding.right": "20"
+    },
+    "command": "set"
+  }
+]

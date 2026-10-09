@@ -1,0 +1,14 @@
+{
+  "changedOriginalParts": [
+    "[Content_Types].xml",
+    "ppt/slides/slide3.xml",
+    "ppt/_rels/presentation.xml.rels"
+  ],
+  "originalSlidesPreserved": [
+    1,
+    2
+  ],
+  "thirdSlideUnchangedShapesPreserved": 170,
+  "updatedNativeTextboxes": 14,
+  "sourceSha256": "d0cc65b51362bff4cc7592127dc78ffee4e4c520446517f1a230dc9b0e0776ff"
+}

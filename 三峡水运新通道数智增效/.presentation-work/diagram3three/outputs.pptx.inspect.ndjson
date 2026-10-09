@@ -1,0 +1,14 @@
+{"kind":"deck","id":"pr/9d6be3","name":"Deck"}
+{"kind":"layout","layoutId":"ce625f55-c28d-4c4b-93c6-d6d4d1b99f59","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"1e6cd138-7cc4-4410-aa48-1084ec374f0c","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/we1qoh","slide":1,"title":"航运能力与需求","textShapes":6}
+{"kind":"shape","id":"sh/14nypsbi","slide":1,"name":"核心成果_1","bbox":[1027.2,340,218.88,155]}
+{"kind":"textbox","id":"sh/e1wzuxcr","slide":1,"name":"成果文字_2","text":"航运能力与需求\n耦合响应模型","textPreview":"航运能力与需求 | 耦合响应模型","textChars":14,"textLines":2,"bbox":[1035.2,347,202.88,54]}
+{"kind":"textbox","id":"sh/f25gn2tc","slide":1,"name":"成果文字_3","text":"耦合通航能力与需求\n刻画排队与服务变化","textPreview":"耦合通航能力与需求 | 刻画排队与服务变化","textChars":19,"textLines":2,"bbox":[1038.2,407,196.88,80]}
+{"kind":"shape","id":"sh/szehsnul","slide":1,"name":"核心成果_4","bbox":[1027.2,930,218.88,155]}
+{"kind":"textbox","id":"sh/d0nylsb6","slide":1,"name":"成果文字_5","text":"运输组织调整与\n运行反馈模型","textPreview":"运输组织调整与 | 运行反馈模型","textChars":14,"textLines":2,"bbox":[1035.2,937,202.88,54]}
+{"kind":"textbox","id":"sh/6xczqdcv","slide":1,"name":"成果文字_6","text":"刻画航次与发运调整\n反馈运力与到达变化","textPreview":"刻画航次与发运调整 | 反馈运力与到达变化","textChars":19,"textLines":2,"bbox":[1038.2,997,196.88,80]}
+{"kind":"shape","id":"sh/ry5gjit0","slide":1,"name":"核心成果_7","bbox":[1027.2,1480,218.88,175]}
+{"kind":"textbox","id":"sh/cvyh47a5","slide":1,"name":"成果文字_8","text":"航运波动传播与\n动态推演技术","textPreview":"航运波动传播与 | 动态推演技术","textChars":14,"textLines":2,"bbox":[1035.2,1487,202.88,54]}
+{"kind":"textbox","id":"sh/xw7ixcbq","slide":1,"name":"成果文字_9","text":"集成航运动态响应模型\n推演波动传播与恢复\n完成模型校准与验证","textPreview":"集成航运动态响应模型 | 推演波动传播与恢复 | 完成模型校准与验证","textChars":30,"textLines":3,"bbox":[1038.2,1547,196.88,100]}
+{"kind":"notes","id":"nt/we1qoh","slide":1,"text":""}

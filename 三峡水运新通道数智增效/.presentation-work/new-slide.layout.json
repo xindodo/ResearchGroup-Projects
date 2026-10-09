@@ -1,0 +1,5564 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/7u5duq",
+    "id": "7u5duq",
+    "slide": 1,
+    "layoutId": "373714ea-e66f-4e73-a6c4-569dc011b27e",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "aa120423-f412-4085-8d71-89b18200c5dc",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFFFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "微软雅黑"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "373714ea-e66f-4e73-a6c4-569dc011b27e",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "aa120423-f412-4085-8d71-89b18200c5dc",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "aa120423-f412-4085-8d71-89b18200c5dc",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7algza9o",
+      "id": "1",
+      "name": "文字_1",
+      "bbox": [
+        59.52,
+        23.04,
+        614.4,
+        40.32
+      ],
+      "geometry": "rect",
+      "text": "子课题3  技术路线图",
+      "textPreview": "子课题3  技术路线图",
+      "resolvedFontSize": 26.67,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 26.67,
+        "typeface": "微软雅黑",
+        "color": "#1F4E79",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "子课题3  技术路线图"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "子课题3  技术路线图",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 26.67,
+            "typeface": "微软雅黑",
+            "color": "#1F4E79",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "子课题3  技术路线图",
+              "fontSize": 26.67,
+              "typeface": "微软雅黑",
+              "color": "#1F4E79",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8bux8fa9",
+      "id": "2",
+      "name": "文字_2",
+      "bbox": [
+        529.25,
+        28.8,
+        691.2,
+        32.64
+      ],
+      "geometry": "rect",
+      "text": "枢纽施工扰动下航运系统波动响应研究",
+      "textPreview": "枢纽施工扰动下航运系统波动响应研究",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 16,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "枢纽施工扰动下航运系统波动响应研究"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "枢纽施工扰动下航运系统波动响应研究",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "枢纽施工扰动下航运系统波动响应研究",
+              "fontSize": 16,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9c3y1kru",
+      "id": "3",
+      "name": "节点_3",
+      "bbox": [
+        59.52,
+        71.04,
+        1160.93,
+        1.34
+      ],
+      "geometry": "rect",
+      "fillColor": "#BDD7EE",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/udwfa5sz",
+      "id": "4",
+      "name": "节点_4",
+      "bbox": [
+        34.56,
+        82.56,
+        48,
+        604.8
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#C55A11",
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ve5g3a9k",
+      "id": "5",
+      "name": "文字_5",
+      "bbox": [
+        34.56,
+        130,
+        48,
+        512
+      ],
+      "geometry": "rect",
+      "text": "研\n究\n基\n础\n与\n数\n据\n支\n撑",
+      "textPreview": "研 | 究 | 基 | 础 | 与 | 数 | 据 | 支 | 撑",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 20,
+        "typeface": "微软雅黑",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 9,
+        "lines": [
+          {
+            "index": 1,
+            "text": "研"
+          },
+          {
+            "index": 2,
+            "text": "究"
+          },
+          {
+            "index": 3,
+            "text": "基"
+          },
+          {
+            "index": 4,
+            "text": "础"
+          },
+          {
+            "index": 5,
+            "text": "与"
+          },
+          {
+            "index": 6,
+            "text": "数"
+          },
+          {
+            "index": 7,
+            "text": "据"
+          },
+          {
+            "index": 8,
+            "text": "支"
+          },
+          {
+            "index": 9,
+            "text": "撑"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "研",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "研",
+              "fontSize": 20,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "究",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "究",
+              "fontSize": 20,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "基",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "基",
+              "fontSize": 20,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "础",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "础",
+              "fontSize": 20,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "与",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "与",
+              "fontSize": 20,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 6,
+          "text": "数",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "数",
+              "fontSize": 20,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 7,
+          "text": "据",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "据",
+              "fontSize": 20,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 8,
+          "text": "支",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "支",
+              "fontSize": 20,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 9,
+          "text": "撑",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "撑",
+              "fontSize": 20,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wfehcfa5",
+      "id": "6",
+      "name": "节点_6",
+      "bbox": [
+        965.76,
+        82.56,
+        48,
+        604.8
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#1F4E79",
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hgny5krq",
+      "id": "7",
+      "name": "文字_7",
+      "bbox": [
+        965.76,
+        130,
+        48,
+        512
+      ],
+      "geometry": "rect",
+      "text": "成\n果\n输\n出\n与\n集\n成\n支\n撑",
+      "textPreview": "成 | 果 | 输 | 出 | 与 | 集 | 成 | 支 | 撑",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 20,
+        "typeface": "微软雅黑",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 9,
+        "lines": [
+          {
+            "index": 1,
+            "text": "成"
+          },
+          {
+            "index": 2,
+            "text": "果"
+          },
+          {
+            "index": 3,
+            "text": "输"
+          },
+          {
+            "index": 4,
+            "text": "出"
+          },
+          {
+            "index": 5,
+            "text": "与"
+          },
+          {
+            "index": 6,
+            "text": "集"
+          },
+          {
+            "index": 7,
+            "text": "成"
+          },
+          {
+            "index": 8,
+            "text": "支"
+          },
+          {
+            "index": 9,
+            "text": "撑"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "成",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "成",
+              "fontSize": 20,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "果",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "果",
+              "fontSize": 20,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "输",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "输",
+              "fontSize": 20,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "出",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "出",
+              "fontSize": 20,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "与",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "与",
+              "fontSize": 20,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 6,
+          "text": "集",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "集",
+              "fontSize": 20,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 7,
+          "text": "成",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "成",
+              "fontSize": 20,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 8,
+          "text": "支",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "支",
+              "fontSize": 20,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 9,
+          "text": "撑",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "撑",
+              "fontSize": 20,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ihwzepsb",
+      "id": "8",
+      "name": "节点_8",
+      "bbox": [
+        94.08,
+        90.24,
+        124.8,
+        133
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#C55A11",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/325g7u9w",
+      "id": "9",
+      "name": "文字_9",
+      "bbox": [
+        99.08,
+        99.24,
+        114.8,
+        30
+      ],
+      "geometry": "rect",
+      "text": "施工扰动\n与通航约束",
+      "textPreview": "施工扰动 | 与通航约束",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 15,
+        "typeface": "微软雅黑",
+        "color": "#C55A11",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "施工扰动"
+          },
+          {
+            "index": 2,
+            "text": "与通航约束"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "施工扰动",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#C55A11",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "施工扰动",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#C55A11",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "与通航约束",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#C55A11",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "与通航约束",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#C55A11",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/v2xova9k",
+      "id": "10",
+      "name": "文字_10",
+      "bbox": [
+        100.08,
+        130.24,
+        112.8,
+        85
+      ],
+      "geometry": "rect",
+      "text": "施工阶段 · 作业范围\n停限航窗口\n通航条件变化",
+      "textPreview": "施工阶段 · 作业范围 | 停限航窗口 | 通航条件变化",
+      "resolvedFontSize": 12.8,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 12.8,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "施工阶段 ·"
+          },
+          {
+            "index": 2,
+            "text": "作业范围"
+          },
+          {
+            "index": 3,
+            "text": "停限航窗口"
+          },
+          {
+            "index": 4,
+            "text": "通航条件变化"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "施工阶段 · 作业范围",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 12.8,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "施工阶段 · 作业范围",
+              "fontSize": 12.8,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "停限航窗口",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 12.8,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "停限航窗口",
+              "fontSize": 12.8,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "通航条件变化",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 12.8,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "通航条件变化",
+              "fontSize": 12.8,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u14725sz",
+      "id": "11",
+      "name": "节点_11",
+      "bbox": [
+        94.08,
+        244,
+        124.8,
+        133
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#C55A11",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/h4f6xkrq",
+      "id": "12",
+      "name": "文字_12",
+      "bbox": [
+        99.08,
+        253,
+        114.8,
+        30
+      ],
+      "geometry": "rect",
+      "text": "运行与货类\n多源数据",
+      "textPreview": "运行与货类 | 多源数据",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 15,
+        "typeface": "微软雅黑",
+        "color": "#C55A11",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "运行与货类"
+          },
+          {
+            "index": 2,
+            "text": "多源数据"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "运行与货类",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#C55A11",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "运行与货类",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#C55A11",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "多源数据",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#C55A11",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "多源数据",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#C55A11",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w36p4fa5",
+      "id": "13",
+      "name": "文字_13",
+      "bbox": [
+        100.08,
+        284,
+        112.8,
+        85
+      ],
+      "geometry": "rect",
+      "text": "AIS · 到达流\n过坝货量 · 重点货类\n运输时空特征",
+      "textPreview": "AIS · 到达流 | 过坝货量 · 重点货类 | 运输时空特征",
+      "resolvedFontSize": 12.8,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 12.8,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "AIS · 到达流"
+          },
+          {
+            "index": 2,
+            "text": "过坝货量 ·"
+          },
+          {
+            "index": 3,
+            "text": "重点货类"
+          },
+          {
+            "index": 4,
+            "text": "运输时空特征"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "AIS · 到达流",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 12.8,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "AIS · 到达流",
+              "fontSize": 12.8,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "过坝货量 · 重点货类",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 12.8,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "过坝货量 · 重点货类",
+              "fontSize": 12.8,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "运输时空特征",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 12.8,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "运输时空特征",
+              "fontSize": 12.8,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nydorq98",
+      "id": "14",
+      "name": "节点_14",
+      "bbox": [
+        94.08,
+        397.76,
+        124.8,
+        133
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#C55A11",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mx47y5s3",
+      "id": "15",
+      "name": "文字_15",
+      "bbox": [
+        99.08,
+        406.76,
+        114.8,
+        30
+      ],
+      "geometry": "rect",
+      "text": "市场与主体\n行为数据",
+      "textPreview": "市场与主体 | 行为数据",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 15,
+        "typeface": "微软雅黑",
+        "color": "#C55A11",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "市场与主体"
+          },
+          {
+            "index": 2,
+            "text": "行为数据"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "市场与主体",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#C55A11",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "市场与主体",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#C55A11",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "行为数据",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#C55A11",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "行为数据",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#C55A11",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/90v6t0re",
+      "id": "16",
+      "name": "文字_16",
+      "bbox": [
+        100.08,
+        437.76,
+        112.8,
+        85
+      ],
+      "geometry": "rect",
+      "text": "运价 · 成本 · 船期\n运力配置 · 航次安排\n发运与通道选择",
+      "textPreview": "运价 · 成本 · 船期 | 运力配置 · 航次安排 | 发运与通道选择",
+      "resolvedFontSize": 12.8,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 12.8,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "运价 · 成本 · 船期"
+          },
+          {
+            "index": 2,
+            "text": "运力配置 ·"
+          },
+          {
+            "index": 3,
+            "text": "航次安排"
+          },
+          {
+            "index": 4,
+            "text": "发运与通道选择"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "运价 · 成本 · 船期",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 12.8,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "运价 · 成本 · 船期",
+              "fontSize": 12.8,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "运力配置 · 航次安排",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 12.8,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "运力配置 · 航次安排",
+              "fontSize": 12.8,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "发运与通道选择",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 12.8,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "发运与通道选择",
+              "fontSize": 12.8,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8zmp0vat",
+      "id": "17",
+      "name": "节点_17",
+      "bbox": [
+        94.08,
+        551.52,
+        124.8,
+        133
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#C55A11",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ruh83u9s",
+      "id": "18",
+      "name": "文字_18",
+      "bbox": [
+        99.08,
+        560.52,
+        114.8,
+        30
+      ],
+      "geometry": "rect",
+      "text": "研究基础\n与背景条件",
+      "textPreview": "研究基础 | 与背景条件",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 15,
+        "typeface": "微软雅黑",
+        "color": "#C55A11",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "研究基础"
+          },
+          {
+            "index": 2,
+            "text": "与背景条件"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "研究基础",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#C55A11",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "研究基础",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#C55A11",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "与背景条件",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#C55A11",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "与背景条件",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#C55A11",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6t87aps7",
+      "id": "19",
+      "name": "文字_19",
+      "bbox": [
+        100.08,
+        591.52,
+        112.8,
+        85
+      ],
+      "geometry": "rect",
+      "text": "区域需求 · 网络背景\n空间经济整体模型\n综合交通超级网络",
+      "textPreview": "区域需求 · 网络背景 | 空间经济整体模型 | 综合交通超级网络",
+      "resolvedFontSize": 12.8,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 12.8,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "区域需求 ·"
+          },
+          {
+            "index": 2,
+            "text": "网络背景"
+          },
+          {
+            "index": 3,
+            "text": "空间经济整体模型"
+          },
+          {
+            "index": 4,
+            "text": "综合交通超级网络"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "区域需求 · 网络背景",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 12.8,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "区域需求 · 网络背景",
+              "fontSize": 12.8,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "空间经济整体模型",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 12.8,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "空间经济整体模型",
+              "fontSize": 12.8,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "综合交通超级网络",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 12.8,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "综合交通超级网络",
+              "fontSize": 12.8,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2psr2tcf",
+      "id": "20",
+      "name": "流程箭头_20",
+      "bbox": [
+        223,
+        370.56,
+        26.6,
+        52.8
+      ],
+      "geometry": "rightArrow",
+      "fillColor": "#C55A11",
+      "lineWidth": 0
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3q1svyt0",
+      "id": "21",
+      "name": "流程箭头_21",
+      "bbox": [
+        934,
+        370.56,
+        27.8,
+        52.8
+      ],
+      "geometry": "rightArrow",
+      "fillColor": "#2E75B6",
+      "lineWidth": 0
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ora943ul",
+      "id": "22",
+      "name": "节点_22",
+      "bbox": [
+        251.52,
+        82.56,
+        679.68,
+        176.64
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#2E75B6",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ps3ax8bq",
+      "id": "23",
+      "name": "节点_23",
+      "bbox": [
+        258.24,
+        89.28,
+        666.24,
+        38.4
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#2E75B6",
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qtcr6dcb",
+      "id": "24",
+      "name": "文字_24",
+      "bbox": [
+        276,
+        89.28,
+        635,
+        38.4
+      ],
+      "geometry": "rect",
+      "text": "① 施工扰动表征与航运运行波动响应",
+      "textPreview": "① 施工扰动表征与航运运行波动响应",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "微软雅黑",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "① 施工扰动表征与航运运行波动响应"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "① 施工扰动表征与航运运行波动响应",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "① 施工扰动表征与航运运行波动响应",
+              "fontSize": 18,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bulszytw",
+      "id": "25",
+      "name": "节点_25",
+      "bbox": [
+        270.72,
+        136.32,
+        190.72,
+        89
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#DEEBF7",
+      "lineColor": "#2E75B6",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cvut83uh",
+      "id": "26",
+      "name": "文字_26",
+      "bbox": [
+        275.72,
+        145.32,
+        180.72,
+        30
+      ],
+      "geometry": "rect",
+      "text": "施工扰动表征",
+      "textPreview": "施工扰动表征",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "微软雅黑",
+        "color": "#2E75B6",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "施工扰动表征"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "施工扰动表征",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "微软雅黑",
+            "color": "#2E75B6",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "施工扰动表征",
+              "fontSize": 18,
+              "typeface": "微软雅黑",
+              "color": "#2E75B6",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dg3a18b2",
+      "id": "27",
+      "name": "文字_27",
+      "bbox": [
+        276.72,
+        176.32,
+        178.72,
+        41
+      ],
+      "geometry": "rect",
+      "text": "阶段 · 范围 · 持续时间\n通航约束与能力折减",
+      "textPreview": "阶段 · 范围 · 持续时间 | 通航约束与能力折减",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 15,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "阶段 · 范围 · 持续时间"
+          },
+          {
+            "index": 2,
+            "text": "通航约束与能力折减"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "阶段 · 范围 · 持续时间",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "阶段 · 范围 · 持续时间",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "通航约束与能力折减",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "通航约束与能力折减",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6x8ru9c7",
+      "id": "28",
+      "name": "节点_28",
+      "bbox": [
+        496,
+        136.32,
+        190.72,
+        89
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#DEEBF7",
+      "lineColor": "#2E75B6",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ryhsnets",
+      "id": "29",
+      "name": "文字_29",
+      "bbox": [
+        501,
+        145.32,
+        180.72,
+        30
+      ],
+      "geometry": "rect",
+      "text": "供需与组织波动",
+      "textPreview": "供需与组织波动",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "微软雅黑",
+        "color": "#2E75B6",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "供需与组织波动"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "供需与组织波动",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "微软雅黑",
+            "color": "#2E75B6",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "供需与组织波动",
+              "fontSize": 18,
+              "typeface": "微软雅黑",
+              "color": "#2E75B6",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9c7u9cva",
+      "id": "30",
+      "name": "文字_30",
+      "bbox": [
+        502,
+        176.32,
+        178.72,
+        41
+      ],
+      "geometry": "rect",
+      "text": "有效能力 · 需求时空变化\n到达流 · 排队 · 船期",
+      "textPreview": "有效能力 · 需求时空变化 | 到达流 · 排队 · 船期",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 15,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "有效能力 · 需求时空变化"
+          },
+          {
+            "index": 2,
+            "text": "到达流 · 排队 · 船期"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "有效能力 · 需求时空变化",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "有效能力 · 需求时空变化",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "到达流 · 排队 · 船期",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "到达流 · 排队 · 船期",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8byd07ep",
+      "id": "31",
+      "name": "节点_31",
+      "bbox": [
+        721.28,
+        136.32,
+        190.72,
+        89
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#DEEBF7",
+      "lineColor": "#2E75B6",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 32,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/na5c72d4",
+      "id": "32",
+      "name": "文字_32",
+      "bbox": [
+        726.28,
+        145.32,
+        180.72,
+        30
+      ],
+      "geometry": "rect",
+      "text": "运行响应度量",
+      "textPreview": "运行响应度量",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "微软雅黑",
+        "color": "#2E75B6",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "运行响应度量"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "运行响应度量",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "微软雅黑",
+            "color": "#2E75B6",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "运行响应度量",
+              "fontSize": 18,
+              "typeface": "微软雅黑",
+              "color": "#2E75B6",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 33,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m9wvyxwj",
+      "id": "33",
+      "name": "文字_33",
+      "bbox": [
+        727.28,
+        176.32,
+        178.72,
+        41
+      ],
+      "geometry": "rect",
+      "text": "港航作业衔接 · 运输组织\n时效与可靠性变化",
+      "textPreview": "港航作业衔接 · 运输组织 | 时效与可靠性变化",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 15,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "港航作业衔接 · 运输组织"
+          },
+          {
+            "index": 2,
+            "text": "时效与可靠性变化"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "港航作业衔接 · 运输组织",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "港航作业衔接 · 运输组织",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "时效与可靠性变化",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "时效与可靠性变化",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 34,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xg7udwv6",
+      "id": "34",
+      "name": "流程箭头_34",
+      "bbox": [
+        465.28,
+        172,
+        26.88,
+        19.2
+      ],
+      "geometry": "rightArrow",
+      "fillColor": "#2E75B6",
+      "lineWidth": 0
+    },
+    {
+      "order": 35,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wfyd4re1",
+      "id": "35",
+      "name": "流程箭头_35",
+      "bbox": [
+        690.56,
+        172,
+        26.88,
+        19.2
+      ],
+      "geometry": "rightArrow",
+      "fillColor": "#2E75B6",
+      "lineWidth": 0
+    },
+    {
+      "order": 36,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vepcbmdg",
+      "id": "36",
+      "name": "文字_36",
+      "bbox": [
+        270.72,
+        230,
+        641.28,
+        23
+      ],
+      "geometry": "rect",
+      "text": "方法：施工事件分析 · 基准/扰动情景对照 · 分货类、航线与船型响应识别",
+      "textPreview": "方法：施工事件分析 · 基准/扰动情景对照 · 分货类、航线与船型响应识别",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 13,
+        "typeface": "微软雅黑",
+        "color": "#2E75B6",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "方法：施工事件分析 · 基准/扰动情景对照 · 分货类、航线与船型响应识别"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "方法：施工事件分析 · 基准/扰动情景对照 · 分货类、航线与船型响应识别",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "微软雅黑",
+            "color": "#2E75B6",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "方法：施工事件分析 · 基准/扰动情景对照 · 分货类、航线与船型响应识别",
+              "fontSize": 13,
+              "typeface": "微软雅黑",
+              "color": "#2E75B6",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 37,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/adgv2hwv",
+      "id": "37",
+      "name": "流程箭头_37",
+      "bbox": [
+        584,
+        259.7,
+        15.36,
+        13.6
+      ],
+      "geometry": "downArrow",
+      "fillColor": "#2E75B6",
+      "lineWidth": 0
+    },
+    {
+      "order": 38,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dknu1sv2",
+      "id": "38",
+      "name": "节点_38",
+      "bbox": [
+        251.52,
+        274,
+        679.68,
+        195
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#21864B",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 39,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cjudsneh",
+      "id": "39",
+      "name": "节点_39",
+      "bbox": [
+        258.24,
+        280.72,
+        666.24,
+        38.4
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#21864B",
+      "lineWidth": 0
+    },
+    {
+      "order": 40,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gz2x0vy5",
+      "id": "40",
+      "name": "文字_40",
+      "bbox": [
+        276,
+        280.72,
+        635,
+        38.4
+      ],
+      "geometry": "rect",
+      "text": "② 航运市场与经营经济响应及主体行为反馈",
+      "textPreview": "② 航运市场与经营经济响应及主体行为反馈",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "微软雅黑",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "② 航运市场与经营经济响应及主体行为反馈"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "② 航运市场与经营经济响应及主体行为反馈",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "② 航运市场与经营经济响应及主体行为反馈",
+              "fontSize": 18,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 41,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/10by90fq",
+      "id": "41",
+      "name": "节点_41",
+      "bbox": [
+        270.72,
+        328,
+        190.72,
+        89
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#E5F1E9",
+      "lineColor": "#21864B",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 42,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/edkfylgz",
+      "id": "42",
+      "name": "文字_42",
+      "bbox": [
+        275.72,
+        337,
+        180.72,
+        30
+      ],
+      "geometry": "rect",
+      "text": "成本与经营响应",
+      "textPreview": "成本与经营响应",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "微软雅黑",
+        "color": "#21864B",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "成本与经营响应"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "成本与经营响应",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "微软雅黑",
+            "color": "#21864B",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "成本与经营响应",
+              "fontSize": 18,
+              "typeface": "微软雅黑",
+              "color": "#21864B",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 43,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fetg7qxk",
+      "id": "43",
+      "name": "文字_43",
+      "bbox": [
+        276.72,
+        368,
+        178.72,
+        41
+      ],
+      "geometry": "rect",
+      "text": "等待/航行/转运成本\n港航经营收益变化",
+      "textPreview": "等待/航行/转运成本 | 港航经营收益变化",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 15,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "等待/航行/转运成本"
+          },
+          {
+            "index": 2,
+            "text": "港航经营收益变化"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "等待/航行/转运成本",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "等待/航行/转运成本",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "港航经营收益变化",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "港航经营收益变化",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 44,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sb2xwvy9",
+      "id": "44",
+      "name": "节点_44",
+      "bbox": [
+        496,
+        328,
+        190.72,
+        89
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#E5F1E9",
+      "lineColor": "#21864B",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 45,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tcby5gfe",
+      "id": "45",
+      "name": "文字_45",
+      "bbox": [
+        501,
+        337,
+        180.72,
+        30
+      ],
+      "geometry": "rect",
+      "text": "运价与市场调整",
+      "textPreview": "运价与市场调整",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "微软雅黑",
+        "color": "#21864B",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "运价与市场调整"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "运价与市场调整",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "微软雅黑",
+            "color": "#21864B",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "运价与市场调整",
+              "fontSize": 18,
+              "typeface": "微软雅黑",
+              "color": "#21864B",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 46,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/690fulg3",
+      "id": "46",
+      "name": "文字_46",
+      "bbox": [
+        502,
+        368,
+        178.72,
+        41
+      ],
+      "geometry": "rect",
+      "text": "成本传导 · 供需失衡\n货类/航线/船型差异",
+      "textPreview": "成本传导 · 供需失衡 | 货类/航线/船型差异",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 15,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "成本传导 · 供需失衡"
+          },
+          {
+            "index": 2,
+            "text": "货类/航线/船型差异"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "成本传导 · 供需失衡",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "成本传导 · 供需失衡",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "货类/航线/船型差异",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "货类/航线/船型差异",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 47,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ra9g3qxo",
+      "id": "47",
+      "name": "节点_47",
+      "bbox": [
+        721.28,
+        328,
+        190.72,
+        89
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#E5F1E9",
+      "lineColor": "#21864B",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 48,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/47ixsbyx",
+      "id": "48",
+      "name": "文字_48",
+      "bbox": [
+        726.28,
+        337,
+        180.72,
+        30
+      ],
+      "geometry": "rect",
+      "text": "主体行为响应",
+      "textPreview": "主体行为响应",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "微软雅黑",
+        "color": "#21864B",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "主体行为响应"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "主体行为响应",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "微软雅黑",
+            "color": "#21864B",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "主体行为响应",
+              "fontSize": 18,
+              "typeface": "微软雅黑",
+              "color": "#21864B",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 49,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/58ry1gfi",
+      "id": "49",
+      "name": "文字_49",
+      "bbox": [
+        727.28,
+        368,
+        178.72,
+        41
+      ],
+      "geometry": "rect",
+      "text": "运力配置 · 航次调整\n发运时点 · 通道选择",
+      "textPreview": "运力配置 · 航次调整 | 发运时点 · 通道选择",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 15,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "运力配置 · 航次调整"
+          },
+          {
+            "index": 2,
+            "text": "发运时点 · 通道选择"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "运力配置 · 航次调整",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "运力配置 · 航次调整",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "发运时点 · 通道选择",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "发运时点 · 通道选择",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 50,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/n2pgb614",
+      "id": "50",
+      "name": "流程箭头_50",
+      "bbox": [
+        465.28,
+        363,
+        26.88,
+        19.2
+      ],
+      "geometry": "rightArrow",
+      "fillColor": "#21864B",
+      "lineWidth": 0
+    },
+    {
+      "order": 51,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mhgz210z",
+      "id": "51",
+      "name": "流程箭头_51",
+      "bbox": [
+        690.56,
+        363,
+        26.88,
+        19.2
+      ],
+      "geometry": "rightArrow",
+      "fillColor": "#21864B",
+      "lineWidth": 0
+    },
+    {
+      "order": 52,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/94rydgza",
+      "id": "52",
+      "name": "流程箭头_52",
+      "bbox": [
+        306,
+        438,
+        570,
+        7
+      ],
+      "geometry": "leftArrow",
+      "fillColor": "#21864B",
+      "lineWidth": 0
+    },
+    {
+      "order": 53,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/83yh4bip",
+      "id": "53",
+      "name": "文字_53",
+      "bbox": [
+        350,
+        419,
+        505,
+        17
+      ],
+      "geometry": "rect",
+      "text": "行为调整反馈至有效运力、到达流与运输需求",
+      "textPreview": "行为调整反馈至有效运力、到达流与运输需求",
+      "resolvedFontSize": 12.51,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 12.51,
+        "typeface": "微软雅黑",
+        "color": "#21864B",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "行为调整反馈至有效运力、到达流与运输需求"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "行为调整反馈至有效运力、到达流与运输需求",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 12.51,
+            "typeface": "微软雅黑",
+            "color": "#21864B",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "行为调整反馈至有效运力、到达流与运输需求",
+              "fontSize": 12.51,
+              "typeface": "微软雅黑",
+              "color": "#21864B",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 54,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/v69gfqhg",
+      "id": "54",
+      "name": "文字_54",
+      "bbox": [
+        270.72,
+        446,
+        641.28,
+        20
+      ],
+      "geometry": "rect",
+      "text": "方法：运输成本核算 · 运价响应分析 · 离散选择与行为弹性估计",
+      "textPreview": "方法：运输成本核算 · 运价响应分析 · 离散选择与行为弹性估计",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 13,
+        "typeface": "微软雅黑",
+        "color": "#21864B",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "方法：运输成本核算 · 运价响应分析 · 离散选择与行为弹性估计"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "方法：运输成本核算 · 运价响应分析 · 离散选择与行为弹性估计",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "微软雅黑",
+            "color": "#21864B",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "方法：运输成本核算 · 运价响应分析 · 离散选择与行为弹性估计",
+              "fontSize": 13,
+              "typeface": "微软雅黑",
+              "color": "#21864B",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 55,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a50z6l0v",
+      "id": "55",
+      "name": "流程箭头_55",
+      "bbox": [
+        584,
+        470,
+        15.36,
+        15
+      ],
+      "geometry": "downArrow",
+      "fillColor": "#21864B",
+      "lineWidth": 0
+    },
+    {
+      "order": 56,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/h8ryhgzm",
+      "id": "56",
+      "name": "节点_56",
+      "bbox": [
+        251.52,
+        486,
+        679.68,
+        201.36
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#BF8F00",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 57,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w7ih8bi1",
+      "id": "57",
+      "name": "节点_57",
+      "bbox": [
+        258.24,
+        492.72,
+        666.24,
+        38.4
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#BF8F00",
+      "lineWidth": 0
+    },
+    {
+      "order": 58,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ja9gjqhc",
+      "id": "58",
+      "name": "文字_58",
+      "bbox": [
+        276,
+        492.72,
+        635,
+        38.4
+      ],
+      "geometry": "rect",
+      "text": "③ 航运波动传播与动态响应模型构建",
+      "textPreview": "③ 航运波动传播与动态响应模型构建",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "微软雅黑",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "③ 航运波动传播与动态响应模型构建"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "③ 航运波动传播与动态响应模型构建",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "③ 航运波动传播与动态响应模型构建",
+              "fontSize": 18,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 59,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/i90zal0r",
+      "id": "59",
+      "name": "节点_59",
+      "bbox": [
+        270.72,
+        540,
+        141.6,
+        89
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FCF3D8",
+      "lineColor": "#BF8F00",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 60,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ehobytob",
+      "id": "60",
+      "name": "文字_60",
+      "bbox": [
+        275.72,
+        549,
+        131.6,
+        30
+      ],
+      "geometry": "rect",
+      "text": "网络传播分析",
+      "textPreview": "网络传播分析",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 16,
+        "typeface": "微软雅黑",
+        "color": "#BF8F00",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "网络传播分析"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "网络传播分析",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "微软雅黑",
+            "color": "#BF8F00",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "网络传播分析",
+              "fontSize": 16,
+              "typeface": "微软雅黑",
+              "color": "#BF8F00",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 61,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fixsry5w",
+      "id": "61",
+      "name": "文字_61",
+      "bbox": [
+        276.72,
+        580,
+        129.6,
+        41
+      ],
+      "geometry": "rect",
+      "text": "坝区多通道\n上下游港航网络",
+      "textPreview": "坝区多通道 | 上下游港航网络",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 14,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "坝区多通道"
+          },
+          {
+            "index": 2,
+            "text": "上下游港航网络"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "坝区多通道",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "坝区多通道",
+              "fontSize": 14,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "上下游港航网络",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "上下游港航网络",
+              "fontSize": 14,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 62,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/036t0j6h",
+      "id": "62",
+      "name": "节点_62",
+      "bbox": [
+        437.28,
+        540,
+        141.6,
+        89
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FCF3D8",
+      "lineColor": "#BF8F00",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 63,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/14faton2",
+      "id": "63",
+      "name": "文字_63",
+      "bbox": [
+        442.28,
+        549,
+        131.6,
+        30
+      ],
+      "geometry": "rect",
+      "text": "传播与恢复规律",
+      "textPreview": "传播与恢复规律",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 16,
+        "typeface": "微软雅黑",
+        "color": "#BF8F00",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "传播与恢复规律"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "传播与恢复规律",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "微软雅黑",
+            "color": "#BF8F00",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "传播与恢复规律",
+              "fontSize": 16,
+              "typeface": "微软雅黑",
+              "color": "#BF8F00",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 64,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qd4bu9of",
+      "id": "64",
+      "name": "文字_64",
+      "bbox": [
+        443.28,
+        580,
+        129.6,
+        41
+      ],
+      "geometry": "rect",
+      "text": "时滞 · 放大阈值\n积压消散 · 恢复",
+      "textPreview": "时滞 · 放大阈值 | 积压消散 · 恢复",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 14,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "时滞 · 放大阈值"
+          },
+          {
+            "index": 2,
+            "text": "积压消散 · 恢复"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "时滞 · 放大阈值",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "时滞 · 放大阈值",
+              "fontSize": 14,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "积压消散 · 恢复",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "积压消散 · 恢复",
+              "fontSize": 14,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 65,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/redsnep0",
+      "id": "65",
+      "name": "节点_65",
+      "bbox": [
+        603.84,
+        540,
+        141.6,
+        89
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FCF3D8",
+      "lineColor": "#BF8F00",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 66,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sfmtwj6l",
+      "id": "66",
+      "name": "文字_66",
+      "bbox": [
+        608.84,
+        549,
+        131.6,
+        30
+      ],
+      "geometry": "rect",
+      "text": "动态响应建模",
+      "textPreview": "动态响应建模",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 16,
+        "typeface": "微软雅黑",
+        "color": "#BF8F00",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "动态响应建模"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "动态响应建模",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "微软雅黑",
+            "color": "#BF8F00",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "动态响应建模",
+              "fontSize": 16,
+              "typeface": "微软雅黑",
+              "color": "#BF8F00",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 67,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dgfapo7q",
+      "id": "67",
+      "name": "文字_67",
+      "bbox": [
+        609.84,
+        580,
+        129.6,
+        41
+      ],
+      "geometry": "rect",
+      "text": "运行—市场—行为\n耦合反馈模块",
+      "textPreview": "运行—市场—行为 | 耦合反馈模块",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 14,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "运行—市场—行为"
+          },
+          {
+            "index": 2,
+            "text": "耦合反馈模块"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "运行—市场—行为",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "运行—市场—行为",
+              "fontSize": 14,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "耦合反馈模块",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "耦合反馈模块",
+              "fontSize": 14,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 68,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a98b6doj",
+      "id": "68",
+      "name": "节点_68",
+      "bbox": [
+        770.4,
+        540,
+        141.6,
+        89
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FCF3D8",
+      "lineColor": "#BF8F00",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 69,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bahszi54",
+      "id": "69",
+      "name": "文字_69",
+      "bbox": [
+        775.4,
+        549,
+        131.6,
+        30
+      ],
+      "geometry": "rect",
+      "text": "校准与情景检验",
+      "textPreview": "校准与情景检验",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 16,
+        "typeface": "微软雅黑",
+        "color": "#BF8F00",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "校准与情景检验"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "校准与情景检验",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "微软雅黑",
+            "color": "#BF8F00",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "校准与情景检验",
+              "fontSize": 16,
+              "typeface": "微软雅黑",
+              "color": "#BF8F00",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 70,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l4je5c76",
+      "id": "70",
+      "name": "文字_70",
+      "bbox": [
+        776.4,
+        580,
+        129.6,
+        41
+      ],
+      "geometry": "rect",
+      "text": "典型历史事件\n多情景 · 敏感性",
+      "textPreview": "典型历史事件 | 多情景 · 敏感性",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 14,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "典型历史事件"
+          },
+          {
+            "index": 2,
+            "text": "多情景 · 敏感性"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "典型历史事件",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "典型历史事件",
+              "fontSize": 14,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "多情景 · 敏感性",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "多情景 · 敏感性",
+              "fontSize": 14,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 71,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/k3adw7ql",
+      "id": "71",
+      "name": "流程箭头_71",
+      "bbox": [
+        414.24,
+        575,
+        21.12,
+        17.28
+      ],
+      "geometry": "rightArrow",
+      "fillColor": "#BF8F00",
+      "lineWidth": 0
+    },
+    {
+      "order": 72,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/z21w32pg",
+      "id": "72",
+      "name": "流程箭头_72",
+      "bbox": [
+        580.8,
+        575,
+        21.12,
+        17.28
+      ],
+      "geometry": "rightArrow",
+      "fillColor": "#BF8F00",
+      "lineWidth": 0
+    },
+    {
+      "order": 73,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/y1svux8v",
+      "id": "73",
+      "name": "流程箭头_73",
+      "bbox": [
+        747.36,
+        575,
+        21.12,
+        17.28
+      ],
+      "geometry": "rightArrow",
+      "fillColor": "#BF8F00",
+      "lineWidth": 0
+    },
+    {
+      "order": 74,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x0je1s7a",
+      "id": "74",
+      "name": "文字_74",
+      "bbox": [
+        270.72,
+        637,
+        641.28,
+        22
+      ],
+      "geometry": "rect",
+      "text": "方法：动态排队理论 · 时变网络 · 离散事件仿真",
+      "textPreview": "方法：动态排队理论 · 时变网络 · 离散事件仿真",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 13,
+        "typeface": "微软雅黑",
+        "color": "#BF8F00",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "方法：动态排队理论 · 时变网络 · 离散事件仿真"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "方法：动态排队理论 · 时变网络 · 离散事件仿真",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "微软雅黑",
+            "color": "#BF8F00",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "方法：动态排队理论 · 时变网络 · 离散事件仿真",
+              "fontSize": 13,
+              "typeface": "微软雅黑",
+              "color": "#BF8F00",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 75,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/czadsnqp",
+      "id": "75",
+      "name": "文字_75",
+      "bbox": [
+        270.72,
+        659,
+        641.28,
+        22
+      ],
+      "geometry": "rect",
+      "text": "校验：能力/排队/船期/运价响应 · 参数辨识 · 误差与不确定性评估",
+      "textPreview": "校验：能力/排队/船期/运价响应 · 参数辨识 · 误差与不确定性评估",
+      "resolvedFontSize": 12.51,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 12.51,
+        "typeface": "微软雅黑",
+        "color": "#BF8F00",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "校验：能力/排队/船期/运价响应 · 参数辨识 · 误差与不确定性评估"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "校验：能力/排队/船期/运价响应 · 参数辨识 · 误差与不确定性评估",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 12.51,
+            "typeface": "微软雅黑",
+            "color": "#BF8F00",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "校验：能力/排队/船期/运价响应 · 参数辨识 · 误差与不确定性评估",
+              "fontSize": 12.51,
+              "typeface": "微软雅黑",
+              "color": "#BF8F00",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 76,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/byhczi94",
+      "id": "76",
+      "name": "节点_76",
+      "bbox": [
+        1027.2,
+        90.24,
+        218.88,
+        107.52
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#F0F6FC",
+      "lineColor": "#2E75B6",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 77,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ax8vqx8j",
+      "id": "77",
+      "name": "文字_77",
+      "bbox": [
+        1032.2,
+        99.24,
+        208.88,
+        30
+      ],
+      "geometry": "rect",
+      "text": "指标体系与响应规律",
+      "textPreview": "指标体系与响应规律",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "微软雅黑",
+        "color": "#2E75B6",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "指标体系与响应规律"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "指标体系与响应规律",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "微软雅黑",
+            "color": "#2E75B6",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "指标体系与响应规律",
+              "fontSize": 18,
+              "typeface": "微软雅黑",
+              "color": "#2E75B6",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 78,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hw3edw7e",
+      "id": "78",
+      "name": "文字_78",
+      "bbox": [
+        1033.2,
+        130.24,
+        206.88,
+        59.52
+      ],
+      "geometry": "rect",
+      "text": "能力 · 流量 · 拥堵\n时效 · 可靠性",
+      "textPreview": "能力 · 流量 · 拥堵 | 时效 · 可靠性",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 15,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "能力 · 流量 · 拥堵"
+          },
+          {
+            "index": 2,
+            "text": "时效 · 可靠性"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "能力 · 流量 · 拥堵",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "能力 · 流量 · 拥堵",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "时效 · 可靠性",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "时效 · 可靠性",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 79,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wvud4rqt",
+      "id": "79",
+      "name": "节点_79",
+      "bbox": [
+        1027.2,
+        218.88,
+        218.88,
+        107.52
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#F0F6FC",
+      "lineColor": "#2E75B6",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 80,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sryhwva1",
+      "id": "80",
+      "name": "文字_80",
+      "bbox": [
+        1032.2,
+        227.88,
+        208.88,
+        30
+      ],
+      "geometry": "rect",
+      "text": "市场响应与行为参数",
+      "textPreview": "市场响应与行为参数",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "微软雅黑",
+        "color": "#2E75B6",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "市场响应与行为参数"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "市场响应与行为参数",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "微软雅黑",
+            "color": "#2E75B6",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "市场响应与行为参数",
+              "fontSize": 18,
+              "typeface": "微软雅黑",
+              "color": "#2E75B6",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 81,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ds7y50rm",
+      "id": "81",
+      "name": "文字_81",
+      "bbox": [
+        1033.2,
+        258.88,
+        206.88,
+        59.52
+      ],
+      "geometry": "rect",
+      "text": "成本 · 运价 · 收益变化\n选择弹性 · 调整时滞",
+      "textPreview": "成本 · 运价 · 收益变化 | 选择弹性 · 调整时滞",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 15,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "成本 · 运价 · 收益变化"
+          },
+          {
+            "index": 2,
+            "text": "选择弹性 · 调整时滞"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "成本 · 运价 · 收益变化",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "成本 · 运价 · 收益变化",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "选择弹性 · 调整时滞",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "选择弹性 · 调整时滞",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 82,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qpwzulsb",
+      "id": "82",
+      "name": "节点_82",
+      "bbox": [
+        1027.2,
+        347.52,
+        218.88,
+        107.52
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#F0F6FC",
+      "lineColor": "#2E75B6",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 83,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rqpg3q9g",
+      "id": "83",
+      "name": "文字_83",
+      "bbox": [
+        1032.2,
+        356.52,
+        208.88,
+        30
+      ],
+      "geometry": "rect",
+      "text": "波动传播与恢复参数",
+      "textPreview": "波动传播与恢复参数",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "微软雅黑",
+        "color": "#2E75B6",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "波动传播与恢复参数"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "波动传播与恢复参数",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "微软雅黑",
+            "color": "#2E75B6",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "波动传播与恢复参数",
+              "fontSize": 18,
+              "typeface": "微软雅黑",
+              "color": "#2E75B6",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 84,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0vyh0vad",
+      "id": "84",
+      "name": "文字_84",
+      "bbox": [
+        1033.2,
+        387.52,
+        206.88,
+        59.52
+      ],
+      "geometry": "rect",
+      "text": "传播时滞 · 非线性阈值\n积压消散 · 系统恢复",
+      "textPreview": "传播时滞 · 非线性阈值 | 积压消散 · 系统恢复",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 15,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "传播时滞 · 非线性阈值"
+          },
+          {
+            "index": 2,
+            "text": "积压消散 · 系统恢复"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "传播时滞 · 非线性阈值",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "传播时滞 · 非线性阈值",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "积压消散 · 系统恢复",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "积压消散 · 系统恢复",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 85,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1w7y90ry",
+      "id": "85",
+      "name": "节点_85",
+      "bbox": [
+        1027.2,
+        476.16,
+        218.88,
+        107.52
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FDEBE0",
+      "lineColor": "#C55A11",
+      "lineWidth": 1.7
+    },
+    {
+      "order": 86,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/etgzy5s7",
+      "id": "86",
+      "name": "文字_86",
+      "bbox": [
+        1032.2,
+        485.16,
+        208.88,
+        30
+      ],
+      "geometry": "rect",
+      "text": "航运动态响应模块",
+      "textPreview": "航运动态响应模块",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "微软雅黑",
+        "color": "#C55A11",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "航运动态响应模块"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "航运动态响应模块",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "微软雅黑",
+            "color": "#C55A11",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "航运动态响应模块",
+              "fontSize": 18,
+              "typeface": "微软雅黑",
+              "color": "#C55A11",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 87,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fupg7q9s",
+      "id": "87",
+      "name": "文字_87",
+      "bbox": [
+        1033.2,
+        516.16,
+        206.88,
+        59.52
+      ],
+      "geometry": "rect",
+      "text": "运行—市场—行为耦合\n标准化参数与输入输出接口",
+      "textPreview": "运行—市场—行为耦合 | 标准化参数与输入输出接口",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 15,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "运行—市场—行为耦合"
+          },
+          {
+            "index": 2,
+            "text": "标准化参数与输入输出接口"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "运行—市场—行为耦合",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "运行—市场—行为耦合",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "标准化参数与输入输出接口",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "标准化参数与输入输出接口",
+              "fontSize": 15,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 88,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wzexobat",
+      "id": "88",
+      "name": "流程箭头_88",
+      "bbox": [
+        1128.96,
+        201,
+        15.36,
+        15.36
+      ],
+      "geometry": "downArrow",
+      "fillColor": "#2E75B6",
+      "lineWidth": 0
+    },
+    {
+      "order": 89,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/h0nyxgre",
+      "id": "89",
+      "name": "流程箭头_89",
+      "bbox": [
+        1128.96,
+        329.5,
+        15.36,
+        15.36
+      ],
+      "geometry": "downArrow",
+      "fillColor": "#2E75B6",
+      "lineWidth": 0
+    },
+    {
+      "order": 90,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zetk3etw",
+      "id": "90",
+      "name": "流程箭头_90",
+      "bbox": [
+        1128.96,
+        458,
+        15.36,
+        15.36
+      ],
+      "geometry": "downArrow",
+      "fillColor": "#2E75B6",
+      "lineWidth": 0
+    },
+    {
+      "order": 91,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ydkju9cb",
+      "id": "91",
+      "name": "节点_91",
+      "bbox": [
+        1027.2,
+        604.8,
+        218.88,
+        69.12
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#1F4E79",
+      "lineWidth": 0
+    },
+    {
+      "order": 92,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lgb25ob2",
+      "id": "92",
+      "name": "文字_92",
+      "bbox": [
+        1034,
+        609,
+        205,
+        60
+      ],
+      "geometry": "rect",
+      "text": "支撑子课题五\n级联模型集成与验证",
+      "textPreview": "支撑子课题五 | 级联模型集成与验证",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 17,
+        "typeface": "微软雅黑",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "支撑子课题五"
+          },
+          {
+            "index": 2,
+            "text": "级联模型集成与验证"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "支撑子课题五",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "支撑子课题五",
+              "fontSize": 17,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "级联模型集成与验证",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "微软雅黑",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "级联模型集成与验证",
+              "fontSize": 17,
+              "typeface": "微软雅黑",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 93,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kf21wjuh",
+      "id": "93",
+      "name": "文字_93",
+      "bbox": [
+        251.52,
+        695,
+        995,
+        18
+      ],
+      "geometry": "rect",
+      "text": "研究边界：航运运行、服务及直接市场经营响应；区域经济与产业链响应由相关子课题开展。",
+      "textPreview": "研究边界：航运运行、服务及直接市场经营响应；区域经济与产业链响应由相关子课题开展。",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 12,
+        "typeface": "微软雅黑",
+        "color": "#6E6E6E",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "研究边界：航运运行、服务及直接市场经营响应；区域经济与产业链响应由相关子课题开展。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "研究边界：航运运行、服务及直接市场经营响应；区域经济与产业链响应由相关子课题开展。",
+          "spaceBefore": 0,
+          "spaceAfter": 0,
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "微软雅黑",
+            "color": "#6E6E6E",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "研究边界：航运运行、服务及直接市场经营响应；区域经济与产业链响应由相关子课题开展。",
+              "fontSize": 12,
+              "typeface": "微软雅黑",
+              "color": "#6E6E6E",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

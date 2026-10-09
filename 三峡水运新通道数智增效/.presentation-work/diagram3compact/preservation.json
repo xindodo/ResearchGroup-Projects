@@ -1,0 +1,19 @@
+{
+  "originalSlidesPreserved": [
+    1,
+    2
+  ],
+  "slide3ContentPreserved": true,
+  "changedOriginalParts": [
+    "[Content_Types].xml",
+    "ppt/presentation.xml",
+    "ppt/_rels/presentation.xml.rels",
+    "ppt/slides/slide3.xml",
+    "ppt/slides/_rels/slide3.xml.rels"
+  ],
+  "canvasPreserved": true,
+  "sourceSha256": "6a3ee1f086c3b5e10ee24f5155506aef2a8fdce4cfc5fdaab48169fab0a58714",
+  "drawingHeightBeforePx": 2537,
+  "drawingHeightAfterPx": 1985,
+  "heightReductionPercent": 21.8
+}

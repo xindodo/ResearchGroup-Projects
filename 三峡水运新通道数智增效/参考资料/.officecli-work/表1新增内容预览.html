@@ -1,0 +1,174 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><style>
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f0f0f0; font-family: '宋体', 'Songti SC', 'STSong', -apple-system, sans-serif; color: #000000; padding: 20px; }
+        .page-wrapper { margin: 0 auto 40px; transition: width 0.15s ease, height 0.15s ease; }
+        .page { margin: 0 auto; padding: 72pt 73.5pt 72pt 89.9pt;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15); border-radius: 4px;
+            min-height: 841.9pt; line-height: 15.6pt; font-size: 10.5pt; position: relative; overflow-x: auto;
+            display: flex; flex-direction: column; font-kerning: none; letter-spacing: 0;
+            transform-origin: left top; transition: transform 0.15s ease;
+            isolation: isolate;
+            }
+        /* The white page fill lives on a pseudo-element behind everything so a
+           behind-text float (z-index:-1) paints ON the page, not under it. A
+           background directly on .page would sit at the stacking-context root and
+           hide any negative-z-index child (watermark/behind-doc image). */
+        .page::before { content: ''; position: absolute; inset: 0; background: white;
+            border-radius: 4px; z-index: -2; }
+        /* break-word (not anywhere): a Latin word is only broken when it cannot
+           fit on a line BY ITSELF; an oversized word beside a float first wraps
+           to the next line. anywhere would break mid-word (produc-t) whenever
+           the word does not fit the current inline gap, which is wrong for Latin.
+           Table cells still need anywhere (see th,td rule below) so the R32
+           fixed-grid column min-content collapses and long content wraps inside
+           its column instead of overflowing the page. */
+        .page-body { flex: 1; display: flex; flex-direction: column; text-autospace: ideograph-alpha ideograph-numeric; overflow-wrap: break-word;  }
+        /* Multi-column sections: flex ignores column-count; switch to block. */
+        .page-body[style*="column-count"] { display: block; }
+        /* A table is typically full text-column width; inside a multi-column
+           section it cannot fit one narrow column and would overflow into and
+           overprint the adjacent column. Let tables span all columns (Word
+           renders a full-width table across the section, with body text
+           flowing in columns above/below it). */
+        [style*="column-count"] > table { column-span: all; }
+        /* Continuation page-bodies (created by pagination JS when content
+           overflows): the segment leader was already at its computed offset
+           in the source body, so its server-rendered margin-top must be
+           zeroed when it becomes :first-child of a new page-body. The
+           ORIGINAL page-body (which holds the document's first paragraph)
+           is intentionally not matched here, so its first-paragraph
+           spaceBefore renders the way Word emits it. */
+        .page-body-cont > :first-child { margin-top: 0 !important; }
+        .page-body > img + h1, .page-body > img + img + h1 { margin-top: 0 !important; }
+        .doc-header, .doc-footer { font-size: 10.5pt; }
+        /* Word paints the header/footer in a layer BEHIND the main body text
+           (they are background bands, not foreground content). The header/footer
+           is position:absolute, so without a z-index it would paint ABOVE the
+           in-flow .page-body (positioned elements paint over non-positioned
+           siblings at the same z-auto level). A full-bleed cover banner floated
+           into the header would then occlude the body text on every page. Pin
+           the band to z-index:-1 so body text (z-auto) paints on top of it, yet
+           it stays ABOVE the white page fill (.page::before at z-index:-2). This
+           also makes the cover-page white title overlay the banner correctly. */
+        .doc-header { position: absolute; top: 42.6pt; left: 89.9pt; right: 73.5pt;
+            padding-bottom: 0.3em; z-index: -1; }
+        .doc-footer { position: absolute; bottom: 49.6pt; left: 89.9pt; right: 73.5pt;
+            padding-top: 0.3em; z-index: -1; }
+        h1, h2, h3, h4, h5, h6 { line-height: 1; }
+        p { margin: 0; margin-bottom: 0; line-height: 1; text-align: justify; text-justify: inter-character; text-autospace: ideograph-alpha ideograph-numeric; }
+        a { color: #2B579A; } a:hover { color: #1a3c6e; }
+        .toc { display: flex; text-indent: 0 !important; }
+        .toc a { color: inherit; text-decoration: none; display: flex; flex: 1; }
+        .toc a span { color: inherit !important; text-decoration: none !important; }
+        /* TOC entries authored as a fldChar field (HYPERLINK \l ... between
+           begin/separate/end) render as plain spans, NOT wrapped in <a>. Word
+           does not apply the Hyperlink character-style color/underline to a
+           TOC field's internal links — entries take the toc-N paragraph color
+           (black/auto by default). Mirror the .toc a span suppression for the
+           un-wrapped case so the Hyperlink rStyle blue does not leak through.
+           color:inherit recovers an explicit toc-N paragraph/style color (e.g.
+           a styled toc2) since that color lands on the .toc <p> itself. */
+        .toc > span { color: inherit !important; text-decoration: none !important; }
+        .dot-leader { flex: 1; border-bottom: 1px dotted #000; margin: 0 4px; min-width: 2em; align-self: flex-end; margin-bottom: 0.25em; }
+        .hyphen-leader { flex: 1; border-bottom: 1px dashed #000; margin: 0 4px; min-width: 2em; align-self: flex-end; margin-bottom: 0.25em; }
+        .underscore-leader { flex: 1; border-bottom: 1px solid #000; margin: 0 4px; min-width: 2em; align-self: flex-end; margin-bottom: 0.25em; }
+        .middledot-leader { flex: 1; border-bottom: 2px dotted #555; margin: 0 4px; min-width: 2em; align-self: flex-end; margin-bottom: 0.25em; }
+        /* CONSISTENCY(run-special-content): w:ptab anchors header/footer
+           left/center/right alignment regions. The paragraph carrying
+           ptabs becomes a flex container so .ptab-spacer (and the leader
+           variants above) can flex-grow to push siblings apart. */
+        p.has-ptab, div.has-ptab { display: flex; align-items: baseline; flex-wrap: wrap; }
+        /* TOC-style <w:tab> paragraphs (center/right tab + dot leader): need a
+           flex container so the .dot-leader span (flex:1) stretches and the
+           trailing page-number segment lands at the right edge. */
+        p.has-leader-tab, div.has-leader-tab { display: flex; align-items: baseline; }
+        /* Three-part Left-tab-Center-tab-Right header/paragraph: the
+           paragraph is a no-wrap flex row and each .atab-band flex-grows,
+           text-aligned (left/center/right) per its own tab stop's Val. nowrap
+           keeps all bands on one line (Word never wraps these).
+           flex-basis is `auto` (band's intrinsic content width), not `0`
+           (forced equal thirds): when every band is short the free space splits
+           ~evenly (grow:1 each) so Center/Right still land mid/right exactly
+           like a three-part header, but a long band (a TOC entry's full title)
+           grows to fit its content and pushes its neighbours rather than being
+           capped to a third. No overflow:hidden / text-overflow:ellipsis — a
+           tab advances the pen to AT LEAST the stop and over-long content
+           simply extends past it; Word never clips at a tab stop. Same
+           ''don't clip body text at a tab'' principle as the positional-tab
+           min-width path. */
+        p.has-aligned-tab, div.has-aligned-tab { display: flex; align-items: baseline; flex-wrap: nowrap; }
+        .atab-band { flex: 1 1 auto; min-width: 0; white-space: nowrap; }
+        .ptab-spacer { flex: 1; min-width: 1em; }
+        ul, ol { padding-left: 2em; margin: 0; }
+        ul { list-style-type: disc; }
+        li { margin: 0; }
+        /* OOXML §17.3.1.36 dropCap: the framed <p> hosts a float clipped
+           to the visible cap-glyph height; the inner run <span>'s own
+           line-height must defer so its natural strut doesn't expand
+           the float past that clip. */
+        .dropcap-wrap > p:first-child > span { line-height: inherit !important; }
+        .equation { text-align: center; padding: 0.5em 0; overflow-x: auto; }
+        img { max-width: 100%; height: auto; }
+        img { writing-mode: horizontal-tb; }
+        .img-error { color: #999; font-style: italic; }
+        table { border-collapse: collapse; font-size: 10.5pt; }
+        td.tsf span, td.tsf div { font-size: inherit !important; color: inherit !important; text-align: inherit !important; }
+        .wg { margin: 0.3em 0; }
+        .wg p { padding: 0; margin: 0.05em 0; }
+        table.borderless { border: none; }
+        table.borderless td, table.borderless th { border: none; padding: 2px 6px; }
+        /* Default tcMar: Word's TableNormal style is top=0 left=108 bottom=0
+           right=108 (twips), so 0pt T/B and 5.4pt L/R. Per-cell tcMar (read
+           from tcPr/tcMar) overrides this via inline style. */
+        th, td { border: none; padding: 0 5.4pt; text-align: inherit; vertical-align: top; break-inside: auto; overflow-wrap: anywhere; }
+        tr { break-inside: auto; }
+        th { font-weight: 600; }
+        @media print { body { background: white; padding: 0; }
+            .page { box-shadow: none; margin: 0; max-width: none; transform: none !important; }
+            hr.page-break { page-break-after: always; border: none; margin: 0; } }
+</style><style>body{background:white;padding:24px} .preview{width:850px;margin:0 auto} h2{font:20px 宋体;color:red;margin-bottom:16px} table{margin:0!important} </style></head><body><div class="preview"><h2>表1：国外机构新增内容</h2><table data-path="/body/table[4]" style="margin-left:6.2pt;width:454.9pt;table-layout:fixed">
+<colgroup><col style="width:4.8%;--col-twips:437" data-col-twips="437"><col style="width:15.73%;--col-twips:1431" data-col-twips="1431"><col style="width:14.7%;--col-twips:1337" data-col-twips="1337"><col style="width:23.93%;--col-twips:2177" data-col-twips="2177"><col style="width:23.88%;--col-twips:2173" data-col-twips="2173"><col style="width:16.96%;--col-twips:1543" data-col-twips="1543"></colgroup>
+<tr data-path="/body/table[4]/tr[1]" style="height:61pt">
+<td style="border-top:0.75pt solid #000000;border-left:1.5pt solid #000000;border-right:0.75pt solid #000000;background-color:#E7E6E6;vertical-align:middle;border-bottom:0.75pt solid #000000;width:21.85pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[1]/tc[1]"><div style="font-size:11pt;text-align:center;line-height:15.6pt"><span style="font-family:'Times New Roman',serif;font-size:11pt;font-weight:bold;line-height:1">序号</span></div></td>
+<td style="border-top:0.75pt solid #000000;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;background-color:#E7E6E6;vertical-align:middle;border-bottom:0.75pt solid #000000;width:71.55pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[1]/tc[2]"><div style="font-size:11pt;text-align:center;line-height:15.6pt"><span style="font-family:'Times New Roman',serif;font-size:11pt;font-weight:bold;line-height:1">机构名称</span></div></td>
+<td style="border-top:0.75pt solid #000000;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;background-color:#E7E6E6;vertical-align:middle;border-bottom:0.75pt solid #000000;width:66.85pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[1]/tc[3]"><div style="font-size:11pt;text-align:center;line-height:15.6pt"><span style="font-family:'Times New Roman',serif;font-size:11pt;font-weight:bold;line-height:1">相关研究内容</span></div></td>
+<td style="border-top:0.75pt solid #000000;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;background-color:#E7E6E6;vertical-align:middle;border-bottom:0.75pt solid #000000;width:108.85pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[1]/tc[4]"><div style="font-size:11pt;text-align:center;line-height:15.6pt"><span style="font-family:'Times New Roman',serif;font-size:11pt;font-weight:bold;line-height:1">相关研究成果</span></div></td>
+<td style="border-top:0.75pt solid #000000;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;background-color:#E7E6E6;vertical-align:middle;border-bottom:0.75pt solid #000000;width:108.65pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[1]/tc[5]"><div style="font-size:11pt;text-align:center;line-height:15.6pt"><span style="font-family:'Times New Roman',serif;font-size:11pt;font-weight:bold;line-height:1">成果应用情况</span></div></td>
+<td style="border-top:0.75pt solid #000000;border-left:0.75pt solid #000000;border-right:1.5pt solid #000000;background-color:#E7E6E6;vertical-align:middle;border-bottom:0.75pt solid #000000;width:77.15pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[1]/tc[6]"><div style="font-size:11pt;text-align:center;line-height:15.6pt"><span style="font-family:'Times New Roman',serif;font-size:11pt;font-weight:bold;line-height:1">本项目与国外机构相关研究内容自评价</span></div></td>
+</tr><tr data-path="/body/table[4]/tr[17]" style="height:5.7pt">
+<td style="border-left:1.5pt solid #000000;border-right:0.75pt solid #000000;width:21.85pt;padding:0pt 1pt 0pt 1pt" data-path="/body/table[4]/tr[17]/tc[1]"><div style="font-size:10.5pt;text-align:center;margin-bottom:0pt;line-height:15.6pt"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">16</span></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:71.55pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[17]/tc[2]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:15.6pt"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">荷兰代尔夫特理工大学（TU Delft）</span></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:66.85pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[17]/tc[3]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">船舶到达、船闸服务过程与航运网络交通仿真；基于船舶自动识别系统（AIS）数据的过闸响应识别。</span></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:108.85pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[17]/tc[4]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">开发开源运输网络仿真工具OpenTNSim；Kuiper（2023）提出基于船舶轨迹识别过闸阶段、比较通过时间并校准船闸仿真的方法。</span><a href="https://repository.tudelft.nl/record/uuid:e557197a-5056-4fdd-9aa4-7ccd23edb3c5" target="_blank" title="Kuiper（2023）：Understanding the locking process using vessel tracking data"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;text-decoration:underline;color:#FF0000;line-height:1"> [F1]</span></a><a href="https://opentnsim.readthedocs.io/en/latest/" target="_blank" title="OpenTNSim官方文档"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;text-decoration:underline;color:#FF0000;line-height:1"> [F1b]</span></a></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:108.65pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[17]/tc[5]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">以荷兰Volkerak、Kreekrak船闸开展实测数据与仿真比较，校准进出闸速度及充水时间；属于案例校准验证。</span></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:1.5pt solid #000000;width:77.15pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[17]/tc[6]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">暂不作领跑／并跑／跟跑等级判定。拟借鉴船闸仿真与轨迹校准方法，拓展施工扰动、多通道传播及市场反馈研究。</span></div></td>
+</tr><tr data-path="/body/table[4]/tr[18]" style="height:5.7pt">
+<td style="border-left:1.5pt solid #000000;border-right:0.75pt solid #000000;width:21.85pt;padding:0pt 1pt 0pt 1pt" data-path="/body/table[4]/tr[18]/tc[1]"><div style="font-size:10.5pt;text-align:center;margin-bottom:0pt;line-height:15.6pt"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">17</span></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:71.55pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[18]/tc[2]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:15.6pt"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">美国陆军工程兵团水资源研究所（USACE IWR）</span></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:66.85pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[18]/tc[3]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">船闸运行效率、拥堵与航运需求的监测分析；内河航运经济评价。</span></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:108.85pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[18]/tc[4]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">建立船闸运行监测系统（LPMS）；历史航运经济技术计划（NETS）形成评估航运需求与系统利用的经济工具研究体系。</span><a href="https://www.iwr.usace.army.mil/Media/Fact-Sheets/Fact-Sheet-Article-View/Article/3566555/institute-for-water-resources-iwr/" target="_blank" title="USACE IWR机构说明及LPMS应用"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;text-decoration:underline;color:#FF0000;line-height:1"> [F2]</span></a><a href="https://www.iwr.usace.army.mil/Missions/Navigation/Navigation-Economics-Technologies-NETS/" target="_blank" title="NETS官方历史项目介绍（已停止活动）"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;text-decoration:underline;color:#FF0000;line-height:1"> [F2b]</span></a></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:108.65pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[18]/tc[5]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">LPMS用于美国船闸运行及水运效率的监测、分析与报告。NETS已停止活动，本条仅将其列为历史研究基础。</span></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:1.5pt solid #000000;width:77.15pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[18]/tc[6]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">暂不作等级判定。拟借鉴运行监测与航运经济分析思路，研究施工事件下运行、成本与主体行为的动态反馈。</span></div></td>
+</tr><tr data-path="/body/table[4]/tr[19]" style="height:5.7pt">
+<td style="border-left:1.5pt solid #000000;border-right:0.75pt solid #000000;width:21.85pt;padding:0pt 1pt 0pt 1pt" data-path="/body/table[4]/tr[19]/tc[1]"><div style="font-size:10.5pt;text-align:center;margin-bottom:0pt;line-height:15.6pt"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">18</span></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:71.55pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[19]/tc[2]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:15.6pt"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">德国联邦水工研究院（BAW）</span></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:66.85pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[19]/tc[3]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">船舶—航道相互作用、航道空间需求与通航条件变化响应；工程改扩建条件下的船舶操纵评估。</span></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:108.85pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[19]/tc[4]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">自主开发TRASSE、PeTra船舶运动与航迹计算方法，结合船舶操纵模拟器评估受限水域中的通航条件。</span><a href="https://wiki.baw.de/de/index.php?title=Fahrdynamische_Modellverfahren" target="_blank" title="BAW官方：Fahrdynamische Modellverfahren（船舶运动建模方法）"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;text-decoration:underline;color:#FF0000;line-height:1"> [F3]</span></a></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:108.65pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[19]/tc[5]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">用于航道新建、扩建及既有航道接纳更大船舶的通航评估；相关成果侧重船舶运动与通航空间，不等同于市场响应模型。</span></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:1.5pt solid #000000;width:77.15pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[19]/tc[6]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">暂不作等级判定。拟吸收通航条件参数化方法，将设施约束进一步连接到有效能力、排队积压与网络波动。</span></div></td>
+</tr><tr data-path="/body/table[4]/tr[20]" style="height:5.7pt">
+<td style="border-left:1.5pt solid #000000;border-right:0.75pt solid #000000;width:21.85pt;padding:0pt 1pt 0pt 1pt" data-path="/body/table[4]/tr[20]/tc[1]"><div style="font-size:10.5pt;text-align:center;margin-bottom:0pt;line-height:15.6pt"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">19</span></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:71.55pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[20]/tc[2]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:15.6pt"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">比利时安特卫普大学交通与区域经济研究团队（TPR）</span></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:66.85pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[20]/tc[3]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">内河运输成本核算；扰动对运输表现的时空影响与网络韧性研究。</span></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:108.85pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[20]/tc[4]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">建立内河航运成本模型，并于2020年开展成本计算程序扩展；开展莱茵—阿尔卑斯走廊扰动韧性研究，结合计量、网络分析和仿真方法。</span><a href="https://www.uantwerpen.be/en/research-groups/transport-and-regional-economics/research/projects/" target="_blank" title="TPR官方项目目录：内河航运成本模型及扰动韧性项目"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;text-decoration:underline;color:#FF0000;line-height:1"> [F4]</span></a></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:108.65pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[20]/tc[5]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">成本模型于2017年交付比利时Vlaamse Waterweg水道管理机构；韧性项目官方页面列明研究方案，未据此声称已形成工程应用效果。</span></div></td>
+<td style="border-left:0.75pt solid #000000;border-right:1.5pt solid #000000;width:77.15pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[20]/tc[6]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">暂不作等级判定。拟借鉴成本核算与扰动分析方法，聚焦施工造成的成本、运价和行为反馈及恢复过程。</span></div></td>
+</tr><tr data-path="/body/table[4]/tr[21]" style="height:5.7pt">
+<td style="border-bottom:0.75pt solid #000000;border-left:1.5pt solid #000000;border-right:0.75pt solid #000000;width:21.85pt;padding:0pt 1pt 0pt 1pt" data-path="/body/table[4]/tr[21]/tc[1]"><div style="font-size:10.5pt;text-align:center;margin-bottom:0pt;line-height:15.6pt"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">20</span></div></td>
+<td style="border-bottom:0.75pt solid #000000;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:71.55pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[21]/tc[2]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:15.6pt"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">莱茵河航运中央委员会（CCNR）</span></div></td>
+<td style="border-bottom:0.75pt solid #000000;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:66.85pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[21]/tc[3]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">欧洲内河运输需求、货类结构、运价及运营条件监测；水位扰动与航运市场变化分析。</span></div></td>
+<td style="border-bottom:0.75pt solid #000000;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:108.85pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[21]/tc[4]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">发布《欧洲内河航运市场观察／市场洞察》报告；2024年4月报告联合分析水位、货类需求、运价和燃料成本变化。</span><a href="https://ccr-zkr.org/files/documents/om/om24_I_en.pdf" target="_blank" title="CCNR Market Insight，2024年4月（运营条件与运价章节）"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;text-decoration:underline;color:#FF0000;line-height:1"> [F5]</span></a></div></td>
+<td style="border-bottom:0.75pt solid #000000;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;width:108.65pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[21]/tc[5]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">形成公开市场监测成果；报告记录2022年低水位期间运价波动及其后通航条件恢复时的价格变化，为市场响应研究提供对照材料。</span></div></td>
+<td style="border-bottom:0.75pt solid #000000;border-left:0.75pt solid #000000;border-right:1.5pt solid #000000;width:77.15pt;padding:0pt 5.4pt 0pt 5.4pt" data-path="/body/table[4]/tr[21]/tc[6]"><div style="font-size:10.5pt;margin-bottom:0pt;line-height:1.3"><span style="font-family:'Times New Roman',serif;font-size:10.5pt;color:#FF0000;line-height:1">暂不作等级判定。拟借鉴分货类市场监测方法，识别施工引起的价格响应，区分水文、需求与燃料价格等因素。</span></div></td>
+</tr></table></div></body></html>

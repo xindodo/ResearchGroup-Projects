@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>子课题3_技术路线图_已追加.pptx</title>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+:root{--slide-design-w:960pt;--slide-design-h:540pt;--slide-aspect:1.7778;}
+/* OfficeCli HTML Preview Stylesheet */
+/* Dynamic variables --slide-design-w, --slide-design-h, --slide-aspect are set inline */
+
+:root {
+    --sidebar-w: 180px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    background: #1a1a2e;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    width: var(--sidebar-w);
+    min-width: var(--sidebar-w);
+    background: #12122a;
+    border-right: 1px solid #2a2a4a;
+    overflow-y: auto;
+    padding: 12px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.sidebar-title {
+    color: #888;
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.thumb {
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    padding: 2px;
+    transition: border-color 0.15s;
+    position: relative;
+}
+.thumb:hover { border-color: #555; }
+.thumb.active { border-color: #5b9bd5; }
+.thumb-inner {
+    width: 100%;
+    aspect-ratio: var(--slide-aspect);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    pointer-events: none;
+}
+.thumb-slide {
+    width: var(--slide-design-w);
+    height: var(--slide-design-h);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+    background: white;
+}
+.thumb-num {
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    color: #888;
+    font-size: 10px;
+}
+
+/* ===== Main area ===== */
+.main {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 24px;
+    scroll-behavior: smooth;
+}
+.file-title {
+    display: none;
+}
+.slide-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+.slide-label {
+    display: none;
+}
+.slide-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.slide {
+    width: var(--slide-design-w);
+    height: var(--slide-design-h);
+    position: relative;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    border-radius: 2px;
+    transform-origin: center top;
+    flex-shrink: 0;
+}
+
+/* ===== Speaker notes (R8-bt-3) ===== */
+.slide-notes {
+    width: var(--slide-design-w);
+    margin-top: 8px;
+    padding: 10px 14px;
+    background: #1f1f1f;
+    color: #ddd;
+    border-left: 3px solid #888;
+    border-radius: 2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 12pt;
+    line-height: 1.4;
+    box-sizing: border-box;
+}
+.slide-notes[dir="rtl"] {
+    border-left: none;
+    border-right: 3px solid #888;
+    text-align: right;
+}
+.slide-notes-label {
+    font-size: 10pt;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #888;
+    margin-bottom: 4px;
+}
+.slide-notes-body div { margin: 2px 0; }
+
+/* ===== Page counter ===== */
+.page-counter {
+    position: fixed;
+    bottom: 16px;
+    right: 24px;
+    background: rgba(0,0,0,0.6);
+    color: #ccc;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    z-index: 100;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+/* ===== Fullscreen ===== */
+body.fullscreen .sidebar { display: none; }
+body.fullscreen .main {
+    padding: 0;
+    gap: 0;
+    overflow: hidden;
+    scroll-behavior: auto;
+}
+body.fullscreen .file-title { display: none; }
+body.fullscreen .slide-container {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    display: none;
+    gap: 0;
+}
+body.fullscreen .slide-container.fs-active { display: flex; }
+body.fullscreen .slide-label { color: #444; font-size: 11px; }
+body.fullscreen .slide {
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* ===== Sidebar toggle button ===== */
+.sidebar-toggle {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 200;
+    background: rgba(30,30,60,0.85);
+    color: #aaa;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 14px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+.sidebar-toggle:hover { color: #fff; border-color: #888; }
+/* Hover zone: top-left 60x60px area reveals the button */
+.toggle-zone {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    z-index: 199;
+    display: none;
+}
+.toggle-zone:hover + .sidebar-toggle,
+.sidebar-toggle:hover {
+    opacity: 1;
+}
+body.sidebar-hidden .sidebar { display: none; }
+body.sidebar-hidden .sidebar-toggle { left: 8px; }
+/* Headless / automated browser — hide sidebar, toggle, and page counter */
+html.headless .sidebar,
+html.headless .sidebar-toggle,
+html.headless .toggle-zone,
+html.headless .page-counter { display: none !important; }
+
+/* ===== Narrow viewport: auto-hide sidebar ===== */
+@media (max-width: 900px) {
+    .sidebar { display: none; }
+    .sidebar-toggle { display: block; }
+    .toggle-zone { display: block; }
+    body.sidebar-visible .sidebar { display: flex; position: fixed; top: 0; left: 0; bottom: 0; z-index: 150; }
+    body.sidebar-visible .sidebar-toggle { left: calc(var(--sidebar-w) + 8px); opacity: 1; }
+    body.sidebar-visible .toggle-zone { display: none; }
+}
+
+/* ===== Elements ===== */
+.shape {
+    position: absolute;
+    overflow: visible;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.shape.has-fill {
+    overflow: hidden;
+}
+.shape-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.shape-text.valign-top { justify-content: flex-start; }
+.shape-text.valign-center { justify-content: center; }
+.shape-text.valign-bottom { justify-content: flex-end; }
+/* anchorCtr="1": shrink-wrap paragraphs so align-items:center can center the
+   text block horizontally (a width:100% .para would otherwise fill the frame). */
+.shape-text.anchor-ctr .para { width: auto; max-width: 100%; }
+/* Vertical text (writing-mode): the flex main axis is horizontal, so valign-*
+   (justify-content) anchors the text column horizontally — matching PowerPoint's
+   anchor="ctr". A width:100% .para would fill that axis and defeat the centering,
+   so shrink-wrap the paragraphs like anchor-ctr does. */
+.shape-text.has-vert-text .para { width: auto; max-width: 100%; }
+.para { width: 100%; line-height: 1; }
+.picture { position: absolute; overflow: hidden; }
+.picture img { width: 100%; height: 100%; object-fit: fill; }
+/* overflow:visible (not hidden) — with border-collapse:collapse the
+   rightmost/bottommost cell's outer 1pt border sits exactly on the
+   container edge; overflow:hidden would clip its outer half. Cell
+   content overflow is already handled by .slide-table td below. */
+.table-container { position: absolute; overflow: visible; }
+.slide-table { width: 100%; height: 100%; border-collapse: collapse; table-layout: fixed; }
+.slide-table td { padding: 4px 6px; vertical-align: top; overflow: hidden; font-size: 10pt; color: inherit; }
+.connector { position: absolute; pointer-events: none; }
+/* The connector's bounding box is a large rectangle for any diagonal/bent line,
+   so the box stays click-through (pointer-events:none above) — otherwise it would
+   swallow clicks meant for shapes beneath it. But pointer-events is inherited in
+   SVG, so leave the drawn stroke itself hittable: an interactive host (the editor)
+   can then select the connector by clicking the visible line, while the empty box
+   area still passes through. fill="none" means only the stroke receives events. */
+.connector svg line, .connector svg polyline, .connector svg path { pointer-events: stroke; }
+.group { position: absolute; }
+
+</style>
+<script>if(location.hash.indexOf('screenshot')>=0||navigator.webdriver||/HeadlessChrome/.test(navigator.userAgent))document.documentElement.classList.add('headless')</script>
+</head>
+<body>
+<div class="toggle-zone"></div><button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+<div class="sidebar">
+  <div class="sidebar-title">子课题3_技术路线图_已追加.pptx</div>
+  <div class="thumb" data-slide="1">
+    <div class="thumb-inner"></div>
+    <span class="thumb-num">1</span>
+  </div>
+  <div class="thumb" data-slide="2">
+    <div class="thumb-inner"></div>
+    <span class="thumb-num">2</span>
+  </div>
+</div>
+<div class="main">
+<h1 class="file-title">子课题3_技术路线图_已追加.pptx</h1>
+<div class="slide-container" data-slide="1">
+  <div class="slide-label">Slide 1</div>
+  <div class="slide-wrapper">
+    <div class="slide" style="background:#FFFFFF;font-family:'Calibri','PingFang SC', 'Hiragino Sans', 'Yu Gothic', 'Apple SD Gothic Neo', 'Microsoft YaHei', 'Noto Sans CJK SC',sans-serif;font-size:18pt;color:#000000;">
+    <div class="shape" style="left:36pt;top:500.5pt;width:168pt;height:28.75pt;padding:3.6pt 7.2pt 3.6pt 7.2pt"><div class="shape-text valign-center"><div class="para" style="text-align:left"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12pt;color:#3F3F3F">10/3/2026</span></div>
+</div></div>
+    <div class="shape" style="left:516pt;top:500.5pt;width:168pt;height:28.75pt;padding:3.6pt 7.2pt 3.6pt 7.2pt"><div class="shape-text valign-center"><div class="para" style="text-align:right"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12pt;color:#3F3F3F">1</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=2]" style="left:44.64pt;top:17.28pt;width:460.8pt;min-height:30.24pt;height:auto;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-center"><div class="para" style="text-align:left"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:20pt;font-weight:bold;color:#1F4E79">子课题3  技术路线图</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=3]" style="left:396.94pt;top:21.6pt;width:518.4pt;min-height:24.48pt;height:auto;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-center"><div class="para" style="text-align:right"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12pt;color:#6E6E6E">枢纽施工扰动下航运系统运输能力与需求波动响应研究</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=4]" style="left:44.64pt;top:53.28pt;width:870.7pt;height:1.01pt;background:#BDD7EE"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=6]" style="left:25.92pt;top:61.92pt;width:36pt;height:453.6pt;background:#C55A11;border-radius:5.76pt"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=7]" style="left:25.92pt;top:72pt;width:36pt;min-height:433.44pt;height:auto;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1.2"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">研</span></div>
+<div class="para" style="text-align:center;line-height:1.2"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">究</span></div>
+<div class="para" style="text-align:center;line-height:1.2"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">基</span></div>
+<div class="para" style="text-align:center;line-height:1.2"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">础</span></div>
+<div class="para" style="text-align:center;line-height:1.2"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">与</span></div>
+<div class="para" style="text-align:center;line-height:1.2"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">数</span></div>
+<div class="para" style="text-align:center;line-height:1.2"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">据</span></div>
+<div class="para" style="text-align:center;line-height:1.2"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">支</span></div>
+<div class="para" style="text-align:center;line-height:1.2"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">撑</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=8]" style="left:724.32pt;top:61.92pt;width:36pt;height:453.6pt;background:#1F4E79;border-radius:5.76pt"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=9]" style="left:724.32pt;top:72pt;width:36pt;min-height:433.44pt;height:auto;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1.2"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">成</span></div>
+<div class="para" style="text-align:center;line-height:1.2"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">果</span></div>
+<div class="para" style="text-align:center;line-height:1.2"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">输</span></div>
+<div class="para" style="text-align:center;line-height:1.2"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">出</span></div>
+<div class="para" style="text-align:center;line-height:1.2"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">与</span></div>
+<div class="para" style="text-align:center;line-height:1.2"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">决</span></div>
+<div class="para" style="text-align:center;line-height:1.2"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">策</span></div>
+<div class="para" style="text-align:center;line-height:1.2"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">支</span></div>
+<div class="para" style="text-align:center;line-height:1.2"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">撑</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=10]" style="left:165.6pt;top:277.92pt;width:21.6pt;height:39.6pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,50% 25%,50% 0,100% 50%,50% 100%,50% 75%,0 75%);background:#C55A11"></div><div class="shape-text valign-center" style="position:relative;"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=11]" style="left:699.84pt;top:277.92pt;width:21.6pt;height:39.6pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,50% 25%,50% 0,100% 50%,50% 100%,50% 75%,0 75%);background:#2E75B6"></div><div class="shape-text valign-center" style="position:relative;"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=12]" style="left:70.56pt;top:70.56pt;width:44.64pt;height:30.24pt;background:#FDEBE0;border:1.25pt solid #EDA06E;border-radius:4.84pt;padding:2.12pt 3.12pt 2.12pt 3.12pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;font-weight:bold;color:#C55A11">施工方案</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=13]" style="left:119.52pt;top:70.56pt;width:44.64pt;height:30.24pt;background:#FDEBE0;border:1.25pt solid #EDA06E;border-radius:4.84pt;padding:2.12pt 3.12pt 2.12pt 3.12pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;font-weight:bold;color:#C55A11">工期安排</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=14]" style="left:70.56pt;top:105.12pt;width:44.64pt;height:30.24pt;background:#FDEBE0;border:1.25pt solid #EDA06E;border-radius:4.84pt;padding:2.12pt 3.12pt 2.12pt 3.12pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;font-weight:bold;color:#C55A11">检修安排</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=15]" style="left:119.52pt;top:105.12pt;width:44.64pt;height:30.24pt;background:#FDEBE0;border:1.25pt solid #EDA06E;border-radius:4.84pt;padding:2.12pt 3.12pt 2.12pt 3.12pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;font-weight:bold;color:#C55A11">通航政策</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=16]" style="left:111.6pt;top:139.68pt;width:11.52pt;height:14.4pt"><div style="position:absolute;inset:0;clip-path:polygon(75% 0%,75% 60%,100% 60%,50% 100%,0% 60%,25% 60%,25% 0%);background:#C55A11"></div><div class="shape-text valign-center" style="position:relative;"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=17]" style="left:70.56pt;top:161.28pt;width:93.6pt;height:76.32pt;background:#FFFFFF;border:1.25pt solid #EDA06E;border-radius:7.63pt;padding:5.34pt 6.55pt 5.34pt 6.55pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10pt;font-weight:bold;color:#C55A11">枢纽施工·检修场景</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.5pt;color:#6E6E6E">施工方案 · 工期</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.5pt;color:#6E6E6E">检修安排</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=18]" style="left:112.32pt;top:239.76pt;width:10.08pt;height:11.52pt"><div style="position:absolute;inset:0;clip-path:polygon(75% 0%,75% 56.25%,100% 56.25%,50% 100%,0% 56.25%,25% 56.25%,25% 0%);background:#EDA06E"></div><div class="shape-text valign-center" style="position:relative;"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=19]" style="left:70.56pt;top:253.44pt;width:93.6pt;height:76.32pt;background:#FFFFFF;border:1.25pt solid #EDA06E;border-radius:7.63pt;padding:5.34pt 6.55pt 5.34pt 6.55pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10pt;font-weight:bold;color:#C55A11">过坝货运量与货种结构</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.5pt;color:#6E6E6E">货种构成</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.5pt;color:#6E6E6E">运输需求规模</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=20]" style="left:112.32pt;top:331.92pt;width:10.08pt;height:11.52pt"><div style="position:absolute;inset:0;clip-path:polygon(75% 0%,75% 56.25%,100% 56.25%,50% 100%,0% 56.25%,25% 56.25%,25% 0%);background:#EDA06E"></div><div class="shape-text valign-center" style="position:relative;"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=21]" style="left:70.56pt;top:345.6pt;width:93.6pt;height:76.32pt;background:#FFFFFF;border:1.25pt solid #EDA06E;border-radius:7.63pt;padding:5.34pt 6.55pt 5.34pt 6.55pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10pt;font-weight:bold;color:#C55A11">船舶到达流数据</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.5pt;color:#6E6E6E">到达流分布</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.5pt;color:#6E6E6E">船舶行为特征</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=22]" style="left:112.32pt;top:424.08pt;width:10.08pt;height:11.52pt"><div style="position:absolute;inset:0;clip-path:polygon(75% 0%,75% 56.25%,100% 56.25%,50% 100%,0% 56.25%,25% 56.25%,25% 0%);background:#EDA06E"></div><div class="shape-text valign-center" style="position:relative;"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=23]" style="left:70.56pt;top:437.76pt;width:93.6pt;height:76.32pt;background:#FFFFFF;border:1.25pt solid #EDA06E;border-radius:7.63pt;padding:5.34pt 6.55pt 5.34pt 6.55pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10pt;font-weight:bold;color:#C55A11">通航信息与政策变量</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.5pt;color:#6E6E6E">通航政策 · 施工信息</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.5pt;color:#6E6E6E">通航条件</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=24]" style="left:188.64pt;top:61.92pt;width:509.76pt;height:132.48pt;background:#FFFFFF;border:1.5pt solid #2E75B6;border-radius:5.3pt"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=25]" style="left:193.68pt;top:66.96pt;width:499.68pt;height:28.8pt;background:#2E75B6;border-radius:8.64pt;padding:2.02pt 34.98pt 2.02pt 34.98pt"><div class="shape-text valign-center"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:13pt;font-weight:bold;color:#FFFFFF">一、枢纽施工扰动的通航约束解析与能力折减表征</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=26]" style="left:203.04pt;top:102.24pt;width:143.04pt;height:82.08pt;background:#DEEBF7;border:1.25pt solid #2E75B6;border-radius:8.21pt;padding:5.75pt 10.01pt 5.75pt 10.01pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.5pt;font-weight:bold;color:#1F4E79">通航约束条件刻画</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;color:#6E6E6E">航道通过限制 · 船闸停航窗口</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;color:#6E6E6E">通航时间变化</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=27]" style="left:348.96pt;top:136.08pt;width:20.16pt;height:14.4pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,64.29% 25%,64.29% 0,100% 50%,64.29% 100%,64.29% 75%,0 75%);background:#2E75B6"></div><div class="shape-text valign-center" style="position:relative;"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=28]" style="left:372pt;top:102.24pt;width:143.04pt;height:82.08pt;background:#DEEBF7;border:1.25pt solid #2E75B6;border-radius:8.21pt;padding:5.75pt 10.01pt 5.75pt 10.01pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.5pt;font-weight:bold;color:#1F4E79">扰动强度—能力折减映射</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;color:#6E6E6E">建立扰动强度与通航能力</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;color:#6E6E6E">折减之间的量化映射关系</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=29]" style="left:517.92pt;top:136.08pt;width:20.16pt;height:14.4pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,64.29% 25%,64.29% 0,100% 50%,64.29% 100%,64.29% 75%,0 75%);background:#2E75B6"></div><div class="shape-text valign-center" style="position:relative;"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=30]" style="left:540.96pt;top:102.24pt;width:143.04pt;height:82.08pt;background:#DEEBF7;border:1.25pt solid #2E75B6;border-radius:8.21pt;padding:5.75pt 10.01pt 5.75pt 10.01pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.5pt;font-weight:bold;color:#1F4E79">多情景扰动库构建</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;color:#6E6E6E">覆盖不同施工方案、工期</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;color:#6E6E6E">与检修安排的多情景组合</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=31]" style="left:188.64pt;top:203.04pt;width:509.76pt;height:174.24pt;background:#FFFFFF;border:1.5pt solid #21854A;border-radius:6.97pt"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=32]" style="left:193.68pt;top:208.08pt;width:499.68pt;height:28.8pt;background:#21854A;border-radius:8.64pt;padding:2.02pt 34.98pt 2.02pt 34.98pt"><div class="shape-text valign-center"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.5pt;font-weight:bold;color:#FFFFFF">二、施工扰动下航运系统运输能力动态建模   ｜   三、航运需求波动特征提取与响应预测</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=33]" style="left:203.04pt;top:243.36pt;width:225.36pt;height:123.84pt;background:#FFFFFF;border:1.25pt solid #21854A;border-radius:7.43pt"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=34]" style="left:213.12pt;top:250.56pt;width:205.2pt;min-height:21.6pt;height:auto;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.5pt;font-weight:bold;color:#21854A">施工扰动下运输能力动态建模</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=35]" style="left:213.12pt;top:276.48pt;width:205.2pt;height:24.48pt;background:#E4F1E8;border-radius:3.43pt;padding:1.71pt 14.36pt 1.71pt 14.36pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;font-weight:bold;color:#404040">三层级能力输入:航道 · 船闸 · 船舶运力</span></div>
+</div><svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible"><rect x="0.63pt" y="0.63pt" width="calc(100% - 1.25pt)" height="calc(100% - 1.25pt)" rx="3.43pt" ry="3.43pt" fill="none" stroke="#21854A" stroke-width="1.25pt" stroke-linecap="butt" stroke-linejoin="round" stroke-dasharray="5 3.75"/></svg></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=36]" style="left:213.12pt;top:308.16pt;width:205.2pt;height:24.48pt;background:#E4F1E8;border-radius:3.43pt;padding:1.71pt 14.36pt 1.71pt 14.36pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;font-weight:bold;color:#404040">运输能力动态表征模型:时间特性与空间瓶颈</span></div>
+</div><svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible"><rect x="0.63pt" y="0.63pt" width="calc(100% - 1.25pt)" height="calc(100% - 1.25pt)" rx="3.43pt" ry="3.43pt" fill="none" stroke="#21854A" stroke-width="1.25pt" stroke-linecap="butt" stroke-linejoin="round" stroke-dasharray="5 3.75"/></svg></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=37]" style="left:213.12pt;top:339.84pt;width:205.2pt;height:24.48pt;background:#E4F1E8;border-radius:3.43pt;padding:1.71pt 14.36pt 1.71pt 14.36pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;font-weight:bold;color:#404040">能力折减表征:折减幅度与持续时间</span></div>
+</div><svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible"><rect x="0.63pt" y="0.63pt" width="calc(100% - 1.25pt)" height="calc(100% - 1.25pt)" rx="3.43pt" ry="3.43pt" fill="none" stroke="#21854A" stroke-width="1.25pt" stroke-linecap="butt" stroke-linejoin="round" stroke-dasharray="5 3.75"/></svg></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=38]" style="left:458.64pt;top:243.36pt;width:225.36pt;height:123.84pt;background:#FFFFFF;border:1.25pt solid #21854A;border-radius:7.43pt"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=39]" style="left:468.72pt;top:250.56pt;width:205.2pt;min-height:21.6pt;height:auto;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.5pt;font-weight:bold;color:#21854A">航运需求波动特征提取与响应预测</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=40]" style="left:468.72pt;top:276.48pt;width:205.2pt;height:24.48pt;background:#E4F1E8;border-radius:3.43pt;padding:1.71pt 14.36pt 1.71pt 14.36pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;font-weight:bold;color:#404040">需求数据基础:货运量 · 货种结构 · 到达流</span></div>
+</div><svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible"><rect x="0.63pt" y="0.63pt" width="calc(100% - 1.25pt)" height="calc(100% - 1.25pt)" rx="3.43pt" ry="3.43pt" fill="none" stroke="#21854A" stroke-width="1.25pt" stroke-linecap="butt" stroke-linejoin="round" stroke-dasharray="5 3.75"/></svg></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=41]" style="left:468.72pt;top:308.16pt;width:205.2pt;height:24.48pt;background:#E4F1E8;border-radius:3.43pt;padding:1.71pt 14.36pt 1.71pt 14.36pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;font-weight:bold;color:#404040">波动特征提取:周期性 · 季节性 · 突发性</span></div>
+</div><svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible"><rect x="0.63pt" y="0.63pt" width="calc(100% - 1.25pt)" height="calc(100% - 1.25pt)" rx="3.43pt" ry="3.43pt" fill="none" stroke="#21854A" stroke-width="1.25pt" stroke-linecap="butt" stroke-linejoin="round" stroke-dasharray="5 3.75"/></svg></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=42]" style="left:468.72pt;top:339.84pt;width:205.2pt;height:24.48pt;background:#E4F1E8;border-radius:3.43pt;padding:1.71pt 14.36pt 1.71pt 14.36pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;font-weight:bold;color:#404040">响应预测:响应时滞与弹性</span></div>
+</div><svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible"><rect x="0.63pt" y="0.63pt" width="calc(100% - 1.25pt)" height="calc(100% - 1.25pt)" rx="3.43pt" ry="3.43pt" fill="none" stroke="#21854A" stroke-width="1.25pt" stroke-linecap="butt" stroke-linejoin="round" stroke-dasharray="5 3.75"/></svg></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=43]" style="left:433.44pt;top:297.36pt;width:20.16pt;height:15.84pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,60.71% 25%,60.71% 0,100% 50%,60.71% 100%,60.71% 75%,0 75%);background:#21854A"></div><div class="shape-text valign-center" style="position:relative;"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=44]" style="left:188.64pt;top:385.92pt;width:509.76pt;height:129.6pt;background:#FFFFFF;border:1.5pt solid #BF8F00;border-radius:5.18pt"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=45]" style="left:193.68pt;top:390.96pt;width:499.68pt;height:28.8pt;background:#BF8F00;border-radius:8.64pt;padding:2.02pt 34.98pt 2.02pt 34.98pt"><div class="shape-text valign-center"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.5pt;font-weight:bold;color:#FFFFFF">四、运输能力与需求波动的耦合响应机理   ｜   五、扰动情景下的仿真推演与调控策略</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=46]" style="left:203.04pt;top:426.24pt;width:106.2pt;height:79.2pt;background:#FCF3D8;border:1.25pt solid #BF8F00;border-radius:7.92pt;padding:5.54pt 7.43pt 5.54pt 7.43pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11pt;font-weight:bold;color:#BF8F00">响应行为识别</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.5pt;color:#6E6E6E">待闸排队 · 绕行转运</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.5pt;color:#6E6E6E">船型调整</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=47]" style="left:310.68pt;top:459.36pt;width:15.84pt;height:12.96pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,59.09% 25%,59.09% 0,100% 50%,59.09% 100%,59.09% 75%,0 75%);background:#BF8F00"></div><div class="shape-text valign-center" style="position:relative;"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=48]" style="left:327.96pt;top:426.24pt;width:106.2pt;height:79.2pt;background:#FCF3D8;border:1.25pt solid #BF8F00;border-radius:7.92pt;padding:5.54pt 7.43pt 5.54pt 7.43pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11pt;font-weight:bold;color:#BF8F00">耦合响应模型</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.5pt;color:#6E6E6E">能力供给与需求波动</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.5pt;color:#6E6E6E">耦合响应建模</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=49]" style="left:435.6pt;top:459.36pt;width:15.84pt;height:12.96pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,59.09% 25%,59.09% 0,100% 50%,59.09% 100%,59.09% 75%,0 75%);background:#BF8F00"></div><div class="shape-text valign-center" style="position:relative;"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=50]" style="left:452.88pt;top:426.24pt;width:106.2pt;height:79.2pt;background:#FCF3D8;border:1.25pt solid #BF8F00;border-radius:7.92pt;padding:5.54pt 7.43pt 5.54pt 7.43pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11pt;font-weight:bold;color:#BF8F00">失配演化路径与临界阈值</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.5pt;color:#6E6E6E">识别劣化阈值</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.5pt;color:#6E6E6E">与调节规律</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=51]" style="left:560.52pt;top:459.36pt;width:15.84pt;height:12.96pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,59.09% 25%,59.09% 0,100% 50%,59.09% 100%,59.09% 75%,0 75%);background:#BF8F00"></div><div class="shape-text valign-center" style="position:relative;"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=52]" style="left:577.8pt;top:426.24pt;width:106.2pt;height:79.2pt;background:#BF8F00;border:1.25pt solid #BF8F00;border-radius:7.92pt;padding:5.54pt 7.43pt 5.54pt 7.43pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11pt;font-weight:bold;color:#FFFFFF">仿真推演与调控优化</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.5pt;color:#FCF3D8">交通流仿真 · 方案评估</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.5pt;color:#FCF3D8">调控优化策略</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=53]" style="left:770.4pt;top:67.68pt;width:164.16pt;height:80.64pt;background:#F0F6FC;border:1.25pt solid #2E75B6;border-radius:8.06pt;padding:5.64pt 11.49pt 5.64pt 11.49pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.5pt;font-weight:bold;color:#1F4E79">多情景扰动库</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;color:#6E6E6E">覆盖不同施工方案、工期</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;color:#6E6E6E">与检修安排的扰动情景</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=54]" style="left:846.72pt;top:150.48pt;width:11.52pt;height:11.52pt"><div style="position:absolute;inset:0;clip-path:polygon(75% 0%,75% 50%,100% 50%,50% 100%,0% 50%,25% 50%,25% 0%);background:#2E75B6"></div><div class="shape-text valign-center" style="position:relative;"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=55]" style="left:770.4pt;top:164.16pt;width:164.16pt;height:80.64pt;background:#F0F6FC;border:1.25pt solid #2E75B6;border-radius:8.06pt;padding:5.64pt 11.49pt 5.64pt 11.49pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.5pt;font-weight:bold;color:#1F4E79">运输能力动态表征模型</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;color:#6E6E6E">能力折减幅度与持续时间</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;color:#6E6E6E">能力动态演化表征</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=56]" style="left:846.72pt;top:246.96pt;width:11.52pt;height:11.52pt"><div style="position:absolute;inset:0;clip-path:polygon(75% 0%,75% 50%,100% 50%,50% 100%,0% 50%,25% 50%,25% 0%);background:#2E75B6"></div><div class="shape-text valign-center" style="position:relative;"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=57]" style="left:770.4pt;top:260.64pt;width:164.16pt;height:80.64pt;background:#F0F6FC;border:1.25pt solid #2E75B6;border-radius:8.06pt;padding:5.64pt 11.49pt 5.64pt 11.49pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.5pt;font-weight:bold;color:#1F4E79">能力—需求耦合响应规律</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;color:#6E6E6E">耦合响应机制 · 失配路径</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;color:#6E6E6E">临界阈值与调节规律</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=58]" style="left:846.72pt;top:343.44pt;width:11.52pt;height:11.52pt"><div style="position:absolute;inset:0;clip-path:polygon(75% 0%,75% 50%,100% 50%,50% 100%,0% 50%,25% 50%,25% 0%);background:#2E75B6"></div><div class="shape-text valign-center" style="position:relative;"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=59]" style="left:770.4pt;top:357.12pt;width:164.16pt;height:80.64pt;background:#FDEBE0;border:1.25pt solid #EDA06E;border-radius:8.06pt;padding:5.64pt 11.49pt 5.64pt 11.49pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.5pt;font-weight:bold;color:#C55A11">调控优化策略</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;color:#6E6E6E">待闸组织 · 运力调配</span></div>
+<div class="para" style="text-align:center;margin-top:2pt;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.5pt;color:#6E6E6E">通航调控优化策略</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=60]" style="left:770.4pt;top:453.6pt;width:164.16pt;height:51.84pt;background:#1F4E79;border-radius:5.18pt;padding:3.63pt 11.49pt 3.63pt 11.49pt"><div class="shape-text valign-center"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11pt;font-weight:bold;color:#FFFFFF">为三峡枢纽施工期</span></div>
+<div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11pt;font-weight:bold;color:#FFFFFF">航运保障提供决策支撑</span></div>
+</div></div>
+    </div>
+  </div>
+</div>
+<div class="slide-container" data-slide="2">
+  <div class="slide-label">Slide 2</div>
+  <div class="slide-wrapper">
+    <div class="slide" style="background:#FFFFFF;font-family:'Calibri','Calibri','PingFang SC', 'Hiragino Sans', 'Yu Gothic', 'Apple SD Gothic Neo', 'Microsoft YaHei', 'Noto Sans CJK SC',sans-serif;font-size:18pt;color:#000000;">
+    <div class="shape" data-path="/slide[2]/shape[@id=94]" style="left:44.64pt;top:17.28pt;width:460.8pt;height:30.24pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:left"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:20pt;font-weight:bold;color:#1F4E79">子课题3  技术路线图</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=2]" style="left:396.94pt;top:21.6pt;width:518.4pt;height:24.48pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:right"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12pt;color:#6E6E6E">枢纽施工扰动下航运系统波动响应研究</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=3]" style="left:44.64pt;top:53.28pt;width:870.7pt;height:1.01pt;background:#BDD7EE"></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=4]" style="left:25.92pt;top:61.92pt;width:36pt;height:453.6pt;background:#C55A11;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=5]" style="left:25.92pt;top:97.5pt;width:36pt;height:384pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">研</span></div>
+<div class="para" style="text-align:center;margin-top:0pt;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">究</span></div>
+<div class="para" style="text-align:center;margin-top:0pt;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">基</span></div>
+<div class="para" style="text-align:center;margin-top:0pt;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">础</span></div>
+<div class="para" style="text-align:center;margin-top:0pt;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">与</span></div>
+<div class="para" style="text-align:center;margin-top:0pt;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">数</span></div>
+<div class="para" style="text-align:center;margin-top:0pt;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">据</span></div>
+<div class="para" style="text-align:center;margin-top:0pt;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">支</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">撑</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=6]" style="left:724.32pt;top:61.92pt;width:36pt;height:453.6pt;background:#1F4E79;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=7]" style="left:724.32pt;top:97.5pt;width:36pt;height:384pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">成</span></div>
+<div class="para" style="text-align:center;margin-top:0pt;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">果</span></div>
+<div class="para" style="text-align:center;margin-top:0pt;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">输</span></div>
+<div class="para" style="text-align:center;margin-top:0pt;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">出</span></div>
+<div class="para" style="text-align:center;margin-top:0pt;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">与</span></div>
+<div class="para" style="text-align:center;margin-top:0pt;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">集</span></div>
+<div class="para" style="text-align:center;margin-top:0pt;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">成</span></div>
+<div class="para" style="text-align:center;margin-top:0pt;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">支</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#FFFFFF">撑</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=8]" style="left:70.56pt;top:67.68pt;width:93.6pt;height:99.75pt;background:#FFFFFF;border:1.28pt solid #C55A11;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=9]" style="left:74.31pt;top:74.43pt;width:86.1pt;height:22.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;font-weight:bold;color:#C55A11">施工扰动</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;font-weight:bold;color:#C55A11">与通航约束</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=10]" style="left:75.06pt;top:97.68pt;width:84.6pt;height:63.75pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.6pt;color:#6E6E6E">施工阶段 · 作业范围</span></div>
+<div class="para" style="text-align:center;margin-top:0pt;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.6pt;color:#6E6E6E">停限航窗口</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.6pt;color:#6E6E6E">通航条件变化</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=11]" style="left:70.56pt;top:183pt;width:93.6pt;height:99.75pt;background:#FFFFFF;border:1.28pt solid #C55A11;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=12]" style="left:74.31pt;top:189.75pt;width:86.1pt;height:22.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;font-weight:bold;color:#C55A11">运行与货类</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;font-weight:bold;color:#C55A11">多源数据</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=13]" style="left:75.06pt;top:213pt;width:84.6pt;height:63.75pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.6pt;color:#6E6E6E">AIS · 到达流</span></div>
+<div class="para" style="text-align:center;margin-top:0pt;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.6pt;color:#6E6E6E">过坝货量 · 重点货类</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.6pt;color:#6E6E6E">运输时空特征</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=14]" style="left:70.56pt;top:298.32pt;width:93.6pt;height:99.75pt;background:#FFFFFF;border:1.28pt solid #C55A11;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=15]" style="left:74.31pt;top:305.07pt;width:86.1pt;height:22.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;font-weight:bold;color:#C55A11">市场与主体</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;font-weight:bold;color:#C55A11">行为数据</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=16]" style="left:75.06pt;top:328.32pt;width:84.6pt;height:63.75pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.6pt;color:#6E6E6E">运价 · 成本 · 船期</span></div>
+<div class="para" style="text-align:center;margin-top:0pt;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.6pt;color:#6E6E6E">运力配置 · 航次安排</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.6pt;color:#6E6E6E">发运与通道选择</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=17]" style="left:70.56pt;top:413.64pt;width:93.6pt;height:99.75pt;background:#FFFFFF;border:1.28pt solid #C55A11;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=18]" style="left:74.31pt;top:420.39pt;width:86.1pt;height:22.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;font-weight:bold;color:#C55A11">研究基础</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;font-weight:bold;color:#C55A11">与背景条件</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=19]" style="left:75.06pt;top:443.64pt;width:84.6pt;height:63.75pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.6pt;color:#6E6E6E">区域需求 · 网络背景</span></div>
+<div class="para" style="text-align:center;margin-top:0pt;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.6pt;color:#6E6E6E">空间经济整体模型</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.6pt;color:#6E6E6E">综合交通超级网络</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=20]" style="left:167.25pt;top:277.92pt;width:19.95pt;height:39.6pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,50% 25%,50% 0,100% 50%,50% 100%,50% 75%,0 75%);background:#C55A11"></div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=21]" style="left:700.5pt;top:277.92pt;width:20.85pt;height:39.6pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,50% 25%,50% 0,100% 50%,50% 100%,50% 75%,0 75%);background:#2E75B6"></div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=22]" style="left:188.64pt;top:61.92pt;width:509.76pt;height:132.48pt;background:#FFFFFF;border:1.28pt solid #2E75B6;border-radius:6.75pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=23]" style="left:193.68pt;top:66.96pt;width:499.68pt;height:28.8pt;background:#2E75B6;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=24]" style="left:207pt;top:66.96pt;width:476.25pt;height:28.8pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:left"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:13.5pt;font-weight:bold;color:#FFFFFF">① 施工扰动表征与航运运行波动响应</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=25]" style="left:203.04pt;top:102.24pt;width:143.04pt;height:66.75pt;background:#DEEBF7;border:1.28pt solid #2E75B6;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=26]" style="left:206.79pt;top:108.99pt;width:135.54pt;height:22.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:13.5pt;font-weight:bold;color:#2E75B6">施工扰动表征</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=27]" style="left:207.54pt;top:132.24pt;width:134.04pt;height:30.75pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">阶段 · 范围 · 持续时间</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">通航约束与能力折减</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=28]" style="left:372pt;top:102.24pt;width:143.04pt;height:66.75pt;background:#DEEBF7;border:1.28pt solid #2E75B6;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=29]" style="left:375.75pt;top:108.99pt;width:135.54pt;height:22.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:13.5pt;font-weight:bold;color:#2E75B6">供需与组织波动</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=30]" style="left:376.5pt;top:132.24pt;width:134.04pt;height:30.75pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">有效能力 · 需求时空变化</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">到达流 · 排队 · 船期</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=31]" style="left:540.96pt;top:102.24pt;width:143.04pt;height:66.75pt;background:#DEEBF7;border:1.28pt solid #2E75B6;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=32]" style="left:544.71pt;top:108.99pt;width:135.54pt;height:22.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:13.5pt;font-weight:bold;color:#2E75B6">运行响应度量</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=33]" style="left:545.46pt;top:132.24pt;width:134.04pt;height:30.75pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">港航作业衔接 · 运输组织</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">时效与可靠性变化</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=34]" style="left:348.96pt;top:129pt;width:20.16pt;height:14.4pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,64.29% 25%,64.29% 0,100% 50%,64.29% 100%,64.29% 75%,0 75%);background:#2E75B6"></div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=35]" style="left:517.92pt;top:129pt;width:20.16pt;height:14.4pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,64.29% 25%,64.29% 0,100% 50%,64.29% 100%,64.29% 75%,0 75%);background:#2E75B6"></div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=36]" style="left:203.04pt;top:172.5pt;width:480.96pt;height:17.25pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.75pt;color:#2E75B6">方法：施工事件分析 · 基准/扰动情景对照 · 分货类、航线与船型响应识别</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=37]" style="left:438pt;top:194.78pt;width:11.52pt;height:10.2pt"><div style="position:absolute;inset:0;clip-path:polygon(75% 0%,75% 50%,100% 50%,50% 100%,0% 50%,25% 50%,25% 0%);background:#2E75B6"></div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=38]" style="left:188.64pt;top:205.5pt;width:509.76pt;height:146.25pt;background:#FFFFFF;border:1.28pt solid #21864B;border-radius:6.75pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=39]" style="left:193.68pt;top:210.54pt;width:499.68pt;height:28.8pt;background:#21864B;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=40]" style="left:207pt;top:210.54pt;width:476.25pt;height:28.8pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:left"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:13.5pt;font-weight:bold;color:#FFFFFF">② 航运市场与经营经济响应及主体行为反馈</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=41]" style="left:203.04pt;top:246pt;width:143.04pt;height:66.75pt;background:#E5F1E9;border:1.28pt solid #21864B;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=42]" style="left:206.79pt;top:252.75pt;width:135.54pt;height:22.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:13.5pt;font-weight:bold;color:#21864B">成本与经营响应</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=43]" style="left:207.54pt;top:276pt;width:134.04pt;height:30.75pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">等待/航行/转运成本</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">港航经营收益变化</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=44]" style="left:372pt;top:246pt;width:143.04pt;height:66.75pt;background:#E5F1E9;border:1.28pt solid #21864B;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=45]" style="left:375.75pt;top:252.75pt;width:135.54pt;height:22.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:13.5pt;font-weight:bold;color:#21864B">运价与市场调整</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=46]" style="left:376.5pt;top:276pt;width:134.04pt;height:30.75pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">成本传导 · 供需失衡</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">货类/航线/船型差异</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=47]" style="left:540.96pt;top:246pt;width:143.04pt;height:66.75pt;background:#E5F1E9;border:1.28pt solid #21864B;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=48]" style="left:544.71pt;top:252.75pt;width:135.54pt;height:22.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:13.5pt;font-weight:bold;color:#21864B">主体行为响应</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=49]" style="left:545.46pt;top:276pt;width:134.04pt;height:30.75pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">运力配置 · 航次调整</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">发运时点 · 通道选择</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=50]" style="left:348.96pt;top:272.25pt;width:20.16pt;height:14.4pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,64.29% 25%,64.29% 0,100% 50%,64.29% 100%,64.29% 75%,0 75%);background:#21864B"></div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=51]" style="left:517.92pt;top:272.25pt;width:20.16pt;height:14.4pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,64.29% 25%,64.29% 0,100% 50%,64.29% 100%,64.29% 75%,0 75%);background:#21864B"></div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=52]" style="left:229.5pt;top:328.5pt;width:427.5pt;height:5.25pt"><div style="position:absolute;inset:0;clip-path:polygon(100% 25%,0.61% 25%,0.61% 0%,0% 50%,0.61% 100%,0.61% 75%,100% 75%);background:#21864B"></div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=53]" style="left:262.5pt;top:314.25pt;width:378.75pt;height:12.75pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.38pt;font-weight:bold;color:#21864B">行为调整反馈至有效运力、到达流与运输需求</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=54]" style="left:203.04pt;top:334.5pt;width:480.96pt;height:15pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.75pt;color:#21864B">方法：运输成本核算 · 运价响应分析 · 离散选择与行为弹性估计</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=55]" style="left:438pt;top:352.5pt;width:11.52pt;height:11.25pt"><div style="position:absolute;inset:0;clip-path:polygon(75% 0%,75% 50%,100% 50%,50% 100%,0% 50%,25% 50%,25% 0%);background:#21864B"></div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=56]" style="left:188.64pt;top:364.5pt;width:509.76pt;height:151.02pt;background:#FFFFFF;border:1.28pt solid #BF8F00;border-radius:6.75pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=57]" style="left:193.68pt;top:369.54pt;width:499.68pt;height:28.8pt;background:#BF8F00;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=58]" style="left:207pt;top:369.54pt;width:476.25pt;height:28.8pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:left"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:13.5pt;font-weight:bold;color:#FFFFFF">③ 航运波动传播与动态响应模型构建</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=59]" style="left:203.04pt;top:405pt;width:106.2pt;height:66.75pt;background:#FCF3D8;border:1.28pt solid #BF8F00;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=60]" style="left:206.79pt;top:411.75pt;width:98.7pt;height:22.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12pt;font-weight:bold;color:#BF8F00">网络传播分析</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=61]" style="left:207.54pt;top:435pt;width:97.2pt;height:30.75pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#6E6E6E">坝区多通道</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#6E6E6E">上下游港航网络</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=62]" style="left:327.96pt;top:405pt;width:106.2pt;height:66.75pt;background:#FCF3D8;border:1.28pt solid #BF8F00;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=63]" style="left:331.71pt;top:411.75pt;width:98.7pt;height:22.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12pt;font-weight:bold;color:#BF8F00">传播与恢复规律</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=64]" style="left:332.46pt;top:435pt;width:97.2pt;height:30.75pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#6E6E6E">时滞 · 放大阈值</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#6E6E6E">积压消散 · 恢复</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=65]" style="left:452.88pt;top:405pt;width:106.2pt;height:66.75pt;background:#FCF3D8;border:1.28pt solid #BF8F00;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=66]" style="left:456.63pt;top:411.75pt;width:98.7pt;height:22.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12pt;font-weight:bold;color:#BF8F00">动态响应建模</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=67]" style="left:457.38pt;top:435pt;width:97.2pt;height:30.75pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#6E6E6E">运行—市场—行为</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#6E6E6E">耦合反馈模块</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=68]" style="left:577.8pt;top:405pt;width:106.2pt;height:66.75pt;background:#FCF3D8;border:1.28pt solid #BF8F00;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=69]" style="left:581.55pt;top:411.75pt;width:98.7pt;height:22.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12pt;font-weight:bold;color:#BF8F00">校准与情景检验</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=70]" style="left:582.3pt;top:435pt;width:97.2pt;height:30.75pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#6E6E6E">典型历史事件</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#6E6E6E">多情景 · 敏感性</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=71]" style="left:310.68pt;top:431.25pt;width:15.84pt;height:12.96pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,59.09% 25%,59.09% 0,100% 50%,59.09% 100%,59.09% 75%,0 75%);background:#BF8F00"></div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=72]" style="left:435.6pt;top:431.25pt;width:15.84pt;height:12.96pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,59.09% 25%,59.09% 0,100% 50%,59.09% 100%,59.09% 75%,0 75%);background:#BF8F00"></div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=73]" style="left:560.52pt;top:431.25pt;width:15.84pt;height:12.96pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,59.09% 25%,59.09% 0,100% 50%,59.09% 100%,59.09% 75%,0 75%);background:#BF8F00"></div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=74]" style="left:203.04pt;top:477.75pt;width:480.96pt;height:16.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.75pt;color:#BF8F00">方法：动态排队理论 · 时变网络 · 离散事件仿真</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=75]" style="left:203.04pt;top:494.25pt;width:480.96pt;height:16.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.38pt;color:#BF8F00">校验：能力/排队/船期/运价响应 · 参数辨识 · 误差与不确定性评估</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=76]" style="left:770.4pt;top:67.68pt;width:164.16pt;height:80.64pt;background:#F0F6FC;border:1.28pt solid #2E75B6;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=77]" style="left:774.15pt;top:74.43pt;width:156.66pt;height:22.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:13.5pt;font-weight:bold;color:#2E75B6">指标体系与响应规律</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=78]" style="left:774.9pt;top:97.68pt;width:155.16pt;height:44.64pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">能力 · 流量 · 拥堵</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">时效 · 可靠性</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=79]" style="left:770.4pt;top:164.16pt;width:164.16pt;height:80.64pt;background:#F0F6FC;border:1.28pt solid #2E75B6;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=80]" style="left:774.15pt;top:170.91pt;width:156.66pt;height:22.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:13.5pt;font-weight:bold;color:#2E75B6">市场响应与行为参数</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=81]" style="left:774.9pt;top:194.16pt;width:155.16pt;height:44.64pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">成本 · 运价 · 收益变化</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">选择弹性 · 调整时滞</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=82]" style="left:770.4pt;top:260.64pt;width:164.16pt;height:80.64pt;background:#F0F6FC;border:1.28pt solid #2E75B6;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=83]" style="left:774.15pt;top:267.39pt;width:156.66pt;height:22.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:13.5pt;font-weight:bold;color:#2E75B6">波动传播与恢复参数</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=84]" style="left:774.9pt;top:290.64pt;width:155.16pt;height:44.64pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">传播时滞 · 非线性阈值</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">积压消散 · 系统恢复</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=85]" style="left:770.4pt;top:357.12pt;width:164.16pt;height:80.64pt;background:#FDEBE0;border:1.28pt solid #C55A11;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=86]" style="left:774.15pt;top:363.87pt;width:156.66pt;height:22.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:13.5pt;font-weight:bold;color:#C55A11">航运动态响应模块</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=87]" style="left:774.9pt;top:387.12pt;width:155.16pt;height:44.64pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">运行—市场—行为耦合</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#6E6E6E">标准化参数与输入输出接口</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=88]" style="left:846.72pt;top:150.75pt;width:11.52pt;height:11.52pt"><div style="position:absolute;inset:0;clip-path:polygon(75% 0%,75% 50%,100% 50%,50% 100%,0% 50%,25% 50%,25% 0%);background:#2E75B6"></div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=89]" style="left:846.72pt;top:247.13pt;width:11.52pt;height:11.52pt"><div style="position:absolute;inset:0;clip-path:polygon(75% 0%,75% 50%,100% 50%,50% 100%,0% 50%,25% 50%,25% 0%);background:#2E75B6"></div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=90]" style="left:846.72pt;top:343.5pt;width:11.52pt;height:11.52pt"><div style="position:absolute;inset:0;clip-path:polygon(75% 0%,75% 50%,100% 50%,50% 100%,0% 50%,25% 50%,25% 0%);background:#2E75B6"></div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=91]" style="left:770.4pt;top:453.6pt;width:164.16pt;height:51.84pt;background:#1F4E79;border-radius:7.5pt;filter:drop-shadow(0.75pt 1.5pt 2.25pt rgba(0,0,0,0.2))"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=92]" style="left:775.5pt;top:456.75pt;width:153.75pt;height:45pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:center;margin-bottom:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12.75pt;font-weight:bold;color:#FFFFFF">支撑子课题五</span></div>
+<div class="para" style="text-align:center;margin-top:0pt"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12.75pt;font-weight:bold;color:#FFFFFF">级联模型集成与验证</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=93]" style="left:188.64pt;top:521.25pt;width:746.25pt;height:13.5pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-center"><div class="para" style="text-align:left"><span style="font-family:'微软雅黑','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9pt;color:#6E6E6E">研究边界：航运运行、服务及直接市场经营响应；区域经济与产业链响应由相关子课题开展。</span></div>
+</div></div>
+    </div>
+  </div>
+  <div class="slide-notes">
+    <div class="slide-notes-label">Notes</div>
+    <div class="slide-notes-body">
+      <div>依据本项目已讨论确定的子课题三研究内容绘制。研究边界限定为航运运行、运输服务、直接航运市场与经营经济响应，以及其主体行为反馈。子课题一提供多源数据与系统特征，子课题二提供级联机理与关联路径，子课题四开展区域及产业链响应分析，子课题五负责全链条模型集成与整体验证。空间经济整体模型与综合交通超级网络提供区域需求、网络背景和仿真基础；细粒度航运响应模型仍需独立构建、校准及检验。</div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="page-counter">1 / 2</div>
+<script>
+// OfficeCli HTML Preview Script
+(function() {
+    const main = document.querySelector('.main');
+    const sidebar = document.querySelector('.sidebar');
+    const counter = document.querySelector('.page-counter');
+    let currentSlide = 0;
+    let isFullscreen = false;
+
+    // ===== Live DOM queries (SSE may add/remove elements) =====
+    function getContainers() { return [...document.querySelectorAll('.main > .slide-container')]; }
+    function getThumbs() { return [...document.querySelectorAll('.sidebar > .thumb')]; }
+    function getTotal() { return getContainers().length; }
+
+    // ===== Responsive scaling =====
+    function scaleSlides() {
+        // 40px breathing room for interactive viewing; headless captures fill the
+        // viewport (the screenshot path sizes it to the slide) so they take none.
+        const headless = document.documentElement.classList.contains('headless');
+        const availW = main.clientWidth - (headless ? 0 : 40);
+        const slides = document.querySelectorAll('.main > .slide-container .slide');
+        // A lone headless slide is a single-slide screenshot: scale it to fill the
+        // viewport in BOTH directions (up or down) so the capture is flush at the
+        // requested resolution regardless of the slide's physical size. Interactive
+        // and multi-slide views only ever shrink to fit.
+        const fill = headless && slides.length === 1;
+        slides.forEach(slide => {
+            const designW = slide.offsetWidth;
+            if (availW > 0 && (fill || designW > availW)) {
+                const s = availW / designW;
+                slide.style.transform = `scale(${s})`;
+                slide.style.transformOrigin = 'center top';
+                const designH = slide.offsetHeight;
+                slide.parentElement.style.height = (designH * s) + 'px';
+                slide.parentElement.style.width = (designW * s) + 'px';
+            } else {
+                slide.style.transform = '';
+                slide.parentElement.style.height = '';
+                slide.parentElement.style.width = '';
+            }
+        });
+    }
+    scaleSlides();
+    window.scaleSlides = scaleSlides;
+    window.addEventListener('resize', scaleSlides);
+
+    // ===== Sidebar thumbnails =====
+    function setActiveThumb(idx) {
+        getThumbs().forEach((t, i) => t.classList.toggle('active', i === idx));
+        currentSlide = idx;
+        if (counter) counter.textContent = `${idx + 1} / ${getTotal()}`;
+    }
+
+    // Event delegation for thumb clicks (handles SSE-added thumbs)
+    if (sidebar) {
+        sidebar.addEventListener('click', function(e) {
+            const thumb = e.target.closest('.thumb');
+            if (!thumb) return;
+            const thumbs = getThumbs();
+            const idx = thumbs.indexOf(thumb);
+            if (idx < 0) return;
+            if (isFullscreen) { showFullscreenSlide(idx); return; }
+            const containers = getContainers();
+            if (containers[idx]) {
+                containers[idx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            setActiveThumb(idx);
+        });
+    }
+
+    // Track visible slide on scroll (normal mode) — use MutationObserver to auto-observe new slides
+    let scrollObserver;
+    if (main) {
+        scrollObserver = new IntersectionObserver(entries => {
+            if (isFullscreen) return;
+            const containers = getContainers();
+            entries.forEach(e => {
+                if (e.isIntersecting && e.intersectionRatio > 0.3) {
+                    const idx = containers.indexOf(e.target);
+                    if (idx >= 0) setActiveThumb(idx);
+                }
+            });
+        }, { root: main, threshold: 0.3 });
+        getContainers().forEach(c => scrollObserver.observe(c));
+
+        // Auto-observe new slide-containers added to main
+        new MutationObserver(mutations => {
+            mutations.forEach(m => {
+                m.addedNodes.forEach(node => {
+                    if (node.nodeType === 1 && node.classList.contains('slide-container')) {
+                        scrollObserver.observe(node);
+                    }
+                });
+            });
+        }).observe(main, { childList: true });
+    }
+
+    // ===== Fullscreen mode =====
+    function showFullscreenSlide(idx) {
+        const containers = getContainers();
+        const total = containers.length;
+        idx = Math.max(0, Math.min(idx, total - 1));
+        containers.forEach((c, i) => c.classList.toggle('fs-active', i === idx));
+        setActiveThumb(idx);
+        const slide = containers[idx]?.querySelector('.slide');
+        if (slide) {
+            const vw = window.innerWidth, vh = window.innerHeight - 30;
+            const sw = slide.scrollWidth || slide.offsetWidth;
+            const sh = slide.scrollHeight || slide.offsetHeight;
+            const s = Math.min(vw / sw, vh / sh, 1);
+            slide.style.transform = `scale(${s})`;
+            slide.style.transformOrigin = 'center top';
+        }
+    }
+    function enterFullscreen() {
+        isFullscreen = true;
+        document.body.classList.add('fullscreen');
+        showFullscreenSlide(currentSlide);
+    }
+    function exitFullscreen() {
+        isFullscreen = false;
+        document.body.classList.remove('fullscreen');
+        getContainers().forEach(c => { c.classList.remove('fs-active'); c.style.display = ''; });
+        scaleSlides();
+        getContainers()[currentSlide]?.scrollIntoView({ block: 'center' });
+    }
+
+    // ===== Keyboard navigation =====
+    document.addEventListener('keydown', e => {
+        if (e.key === 'f' || e.key === 'F') {
+            e.preventDefault();
+            isFullscreen ? exitFullscreen() : enterFullscreen();
+            return;
+        }
+        if (e.key === 'Escape' && isFullscreen) {
+            e.preventDefault();
+            exitFullscreen();
+            return;
+        }
+        const next = e.key === 'ArrowDown' || e.key === ' ' || e.key === 'ArrowRight';
+        const prev = e.key === 'ArrowUp' || e.key === 'ArrowLeft';
+        if (!next && !prev) return;
+        e.preventDefault();
+
+        const total = getTotal();
+        if (isFullscreen) {
+            showFullscreenSlide(currentSlide + (next ? 1 : -1));
+        } else {
+            const target = next
+                ? Math.min(currentSlide + 1, total - 1)
+                : Math.max(currentSlide - 1, 0);
+            const containers = getContainers();
+            if (containers[target]) {
+                containers[target].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            setActiveThumb(target);
+        }
+    });
+
+    // ===== Populate & scale thumbnail slides via cloneNode (zero base64 duplication) =====
+    function buildThumbs() {
+        const slides = document.querySelectorAll('.main > .slide-container .slide');
+        const inners = document.querySelectorAll('.thumb-inner');
+        slides.forEach((slide, i) => {
+            if (i >= inners.length) return;
+            const inner = inners[i];
+            if (inner.querySelector('.thumb-slide')) return;
+            const clone = slide.cloneNode(true);
+            clone.className = 'thumb-slide';
+            clone.style.transform = '';
+            // Remove IDs from cloned elements to avoid getElementById conflicts (e.g. 3D canvas)
+            clone.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
+            // Remove cloned <script> tags (module scripts won't re-execute but keep DOM clean)
+            clone.querySelectorAll('script').forEach(el => el.remove());
+            inner.appendChild(clone);
+        });
+        scaleThumbs();
+    }
+    function scaleThumbs() {
+        document.querySelectorAll('.thumb-inner').forEach(inner => {
+            const thumbSlide = inner.querySelector('.thumb-slide');
+            if (!thumbSlide) return;
+            const thumbW = inner.clientWidth;
+            const slideW = thumbSlide.scrollWidth || thumbSlide.offsetWidth;
+            if (slideW > 0 && thumbW > 0) {
+                thumbSlide.style.transform = `scale(${thumbW / slideW})`;
+                thumbSlide.style.transformOrigin = '0 0';
+            }
+        });
+    }
+    buildThumbs();
+    window.buildThumbs = buildThumbs;
+    window.scaleThumbs = scaleThumbs;
+    window.addEventListener('resize', scaleThumbs);
+
+    // ===== Sidebar toggle (exposed globally for onclick) =====
+    window.toggleSidebar = function() {
+        document.body.classList.toggle('sidebar-visible');
+        document.body.classList.toggle('sidebar-hidden');
+        // Re-scale after sidebar toggle changes main area width
+        requestAnimationFrame(() => {
+            scaleSlides();
+            buildThumbs();
+            scaleThumbs();
+        });
+    };
+
+    // Init
+    if (getTotal() > 0) setActiveThumb(0);
+})();
+
+</script>
+<script>
+(function() {
+    var _katexRetries = 0;
+    function fallbackKatex() {
+        document.querySelectorAll('.katex-formula:not(.katex-rendered)').forEach(function(el) {
+            el.textContent = el.dataset.formula;
+            el.style.fontFamily = 'monospace';
+            el.style.color = '#666';
+            el.classList.add('katex-rendered');
+        });
+    }
+    function renderKatex() {
+        var pending = document.querySelectorAll('.katex-formula:not(.katex-rendered)');
+        if (pending.length === 0) return;
+        if (typeof katex === 'undefined') {
+            // Lazy-load on first demand — handles watch mode where the initial
+            // doc had no formulas (KaTeX tags omitted from head), then a
+            // formula arrived via SSE patch.
+            if (!window._katexLoading) {
+                window._katexLoading = true;
+                // CONSISTENCY(katex-mirror): mirror-first, CDN retry, then fallback.
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'https://d.officecli.ai/assets/katex-0.16.11/katex.min.css';
+                link.onerror = function() { if (!this.dataset.f) { this.dataset.f = 1; this.href = 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css'; } else { this.remove(); } };
+                document.head.appendChild(link);
+                var script = document.createElement('script');
+                script.src = 'https://d.officecli.ai/assets/katex-0.16.11/katex.min.js';
+                script.onload = renderKatex;
+                script.onerror = function() { var s2 = document.createElement('script'); s2.src = 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js'; s2.onload = renderKatex; s2.onerror = fallbackKatex; document.head.appendChild(s2); };
+                document.head.appendChild(script);
+                return;
+            }
+            if (++_katexRetries > 20) { fallbackKatex(); return; }
+            setTimeout(renderKatex, 100); return;
+        }
+        pending.forEach(function(el) {
+            try {
+                katex.render(el.dataset.formula, el, { throwOnError: false, displayMode: true });
+                el.classList.add('katex-rendered');
+            } catch(e) { el.textContent = el.dataset.formula + ' (Error: ' + e.message + '. See https://katex.org/docs/supported.html for supported syntax.)'; }
+        });
+    }
+    // Initial render
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', renderKatex);
+    else renderKatex();
+    // Re-render when DOM changes (watch mode incremental updates)
+    new MutationObserver(function() { renderKatex(); }).observe(document.body, { childList: true, subtree: true });
+})();
+</script>
+</body>
+</html>

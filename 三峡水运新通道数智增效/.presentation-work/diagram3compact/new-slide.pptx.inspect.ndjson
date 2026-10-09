@@ -1,0 +1,194 @@
+{"kind":"deck","id":"pr/z8f88h","name":"Deck"}
+{"kind":"layout","layoutId":"ae9b3ac4-7af4-430c-95b2-16aa3f186a45","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"dbf207b4-1d4b-46aa-ad48-52e167e59207","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/r3emq3","slide":1,"title":"子课题3  技术路线图","textShapes":86}
+{"kind":"textbox","id":"sh/dgfmdsfu","slide":1,"name":"总标题_1","text":"子课题3  技术路线图","textPreview":"子课题3  技术路线图","textChars":11,"textLines":1,"bbox":[59.52,22,570,42]}
+{"kind":"textbox","id":"sh/qd432dw3","slide":1,"name":"子课题名称_2","text":"枢纽施工扰动下航运系统波动响应研究","textPreview":"枢纽施工扰动下航运系统波动响应研究","textChars":17,"textLines":1,"bbox":[610,28,610,33]}
+{"kind":"shape","id":"sh/bed4bixo","slide":1,"name":"容器_3","bbox":[59.52,72,1160.93,1.5]}
+{"kind":"shape","id":"sh/obml03yd","slide":1,"name":"数据侧栏_4","bbox":[34.56,83,48,1924]}
+{"kind":"shape","id":"sh/pcvm98fy","slide":1,"name":"成果侧栏_5","bbox":[965.76,83,48,1924]}
+{"kind":"textbox","id":"sh/2p43ytg7","slide":1,"name":"文字_6","text":"数\n据\n输\n入","textPreview":"数 | 据 | 输 | 入","textChars":7,"textLines":4,"bbox":[34.56,245,48,180]}
+{"kind":"textbox","id":"sh/3ad47yxs","slide":1,"name":"文字_7","text":"研\n究\n成\n果","textPreview":"研 | 究 | 成 | 果","textChars":7,"textLines":4,"bbox":[965.76,245,48,180]}
+{"kind":"textbox","id":"sh/87q5c7eh","slide":1,"name":"文字_8","text":"数\n据\n输\n入","textPreview":"数 | 据 | 输 | 入","textChars":7,"textLines":4,"bbox":[34.56,860,48,180]}
+{"kind":"textbox","id":"sh/98zmlcf2","slide":1,"name":"文字_9","text":"研\n究\n成\n果","textPreview":"研 | 究 | 成 | 果","textChars":7,"textLines":4,"bbox":[965.76,860,48,180]}
+{"kind":"textbox","id":"sh/lkru98vy","slide":1,"name":"文字_10","text":"数\n据\n输\n入","textPreview":"数 | 据 | 输 | 入","textChars":7,"textLines":4,"bbox":[34.56,1630,48,180]}
+{"kind":"textbox","id":"sh/kjit03ud","slide":1,"name":"文字_11","text":"研\n究\n成\n果","textPreview":"研 | 究 | 成 | 果","textChars":7,"textLines":4,"bbox":[965.76,1630,48,180]}
+{"kind":"shape","id":"sh/zi9c7yds","slide":1,"name":"施工与 通航条件_12","bbox":[94.08,145,124.8,182]}
+{"kind":"textbox","id":"sh/yhgbytcn","slide":1,"name":"文字_13","text":"施工与\n通航条件","textPreview":"施工与 | 通航条件","textChars":8,"textLines":2,"bbox":[102.08,152,108.8,46]}
+{"kind":"textbox","id":"sh/xg7u5ov2","slide":1,"name":"文字_14","text":"施工方案\n工期与检修\n停限航窗口\n设施与船型\n放行规则","textPreview":"施工方案 | 工期与检修 | 停限航窗口 | 设施与船型 | 放行规则","textChars":27,"textLines":5,"bbox":[105.08,204,102.8,115]}
+{"kind":"shape","id":"sh/cfytwjuh","slide":1,"name":"运行与 运输需求_15","bbox":[94.08,365,124.8,214]}
+{"kind":"textbox","id":"sh/bepc3edw","slide":1,"name":"文字_16","text":"运行与\n运输需求","textPreview":"运行与 | 运输需求","textChars":8,"textLines":2,"bbox":[102.08,372,108.8,46]}
+{"kind":"textbox","id":"sh/qdgbutcb","slide":1,"name":"文字_17","text":"船舶轨迹\n到达与通过量\n排队与船期\n港口作业\n货类与流向\n发运与交付\n替代通道","textPreview":"船舶轨迹 | 到达与通过量 | 排队与船期 | 港口作业 | 货类与流向 | 发运与交付 | 替代通道","textChars":39,"textLines":7,"bbox":[105.08,424,102.8,147]}
+{"kind":"shape","id":"sh/hcbuhsv6","slide":1,"name":"常态运行 与外部条件_18","bbox":[94.08,601,124.8,165]}
+{"kind":"textbox","id":"sh/wb2t8nul","slide":1,"name":"文字_19","text":"常态运行\n与外部条件","textPreview":"常态运行 | 与外部条件","textChars":10,"textLines":2,"bbox":[102.08,608,108.8,46]}
+{"kind":"textbox","id":"sh/gfad4r2x","slide":1,"name":"文字_20","text":"无施工基准\n水文与天气\n季节性需求\n初始负荷","textPreview":"无施工基准 | 水文与天气 | 季节性需求 | 初始负荷","textChars":22,"textLines":4,"bbox":[105.08,660,102.8,98]}
+{"kind":"shape","id":"sh/hgjedwji","slide":1,"name":"运输组织 记录_21","bbox":[94.08,862,124.8,192]}
+{"kind":"textbox","id":"sh/udsv2hkr","slide":1,"name":"文字_22","text":"运输组织\n记录","textPreview":"运输组织 | 记录","textChars":7,"textLines":2,"bbox":[102.08,869,108.8,46]}
+{"kind":"textbox","id":"sh/fe1wbm1c","slide":1,"name":"文字_23","text":"航次与待闸\n船型与通道\n发运与到达\n港航衔接\n组织调整记录","textPreview":"航次与待闸 | 船型与通道 | 发运与到达 | 港航衔接 | 组织调整记录","textChars":29,"textLines":5,"bbox":[105.08,921,102.8,125]}
+{"kind":"shape","id":"sh/srqd0r2l","slide":1,"name":"典型事件 与检验数据_24","bbox":[94.08,1532,124.8,204]}
+{"kind":"textbox","id":"sh/tsze9cj6","slide":1,"name":"文字_25","text":"典型事件\n与检验数据","textPreview":"典型事件 | 与检验数据","textChars":10,"textLines":2,"bbox":[102.08,1539,108.8,46]}
+{"kind":"textbox","id":"sh/6p8vyhkv","slide":1,"name":"文字_26","text":"施工检修事件\n前后运行记录\n到达与排队\n船期与交付\n独立检验事件\n数据口径核对","textPreview":"施工检修事件 | 前后运行记录 | 到达与排队 | 船期与交付 | 独立检验事件 | 数据口径核对","textChars":39,"textLines":6,"bbox":[105.08,1591,102.8,137]}
+{"kind":"shape","id":"sh/7qhw7mlg","slide":1,"name":"研究模块_27","bbox":[251.52,83,679.68,701]}
+{"kind":"shape","id":"sh/knqdw72p","slide":1,"name":"模块标题背景_28","bbox":[258.24,89.72,666.24,42]}
+{"kind":"textbox","id":"sh/5oze5c3a","slide":1,"name":"模块标题_29","text":"① 施工扰动与航运运行响应","textPreview":"① 施工扰动与航运运行响应","textChars":13,"textLines":1,"bbox":[277,90,634,40]}
+{"kind":"shape","id":"sh/nixwf25w","slide":1,"name":"施工扰动表征_30","bbox":[270.72,145,190.72,108]}
+{"kind":"textbox","id":"sh/mhofmx4b","slide":1,"name":"文字_31","text":"施工扰动表征","textPreview":"施工扰动表征","textChars":6,"textLines":1,"bbox":[278.72,152,174.72,36]}
+{"kind":"textbox","id":"sh/9kfehcn2","slide":1,"name":"文字_32","text":"阶段、范围与强度\n工期、检修与恢复","textPreview":"阶段、范围与强度 | 工期、检修与恢复","textChars":17,"textLines":2,"bbox":[281.72,194,168.72,51]}
+{"kind":"shape","id":"sh/8j6xo7mh","slide":1,"name":"通航约束变化_33","bbox":[496,145,190.72,108]}
+{"kind":"textbox","id":"sh/vmhwjm58","slide":1,"name":"文字_34","text":"通航约束变化","textPreview":"通航约束变化","textChars":6,"textLines":1,"bbox":[504,152,174.72,36]}
+{"kind":"textbox","id":"sh/alofqh4n","slide":1,"name":"文字_35","text":"通航时间与放行规则\n设施可用与船型限制","textPreview":"通航时间与放行规则 | 设施可用与船型限制","textChars":19,"textLines":2,"bbox":[507,194,168.72,51]}
+{"kind":"shape","id":"sh/xozelcne","slide":1,"name":"施工扰动情景_36","bbox":[721.28,145,190.72,108]}
+{"kind":"textbox","id":"sh/wnqxs7mt","slide":1,"name":"文字_37","text":"施工扰动情景","textPreview":"施工扰动情景","textChars":6,"textLines":1,"bbox":[729.28,152,174.72,36]}
+{"kind":"textbox","id":"sh/jqhgnm54","slide":1,"name":"文字_38","text":"常态与施工情景\n水文与需求叠加","textPreview":"常态与施工情景 | 水文与需求叠加","textChars":15,"textLines":2,"bbox":[732.28,194,168.72,51]}
+{"kind":"shape","id":"sh/ip8fuh4j","slide":1,"name":"流程箭头_39","bbox":[465.28,189,26.88,20]}
+{"kind":"shape","id":"sh/25076pg7","slide":1,"name":"流程箭头_40","bbox":[690.56,189,26.88,20]}
+{"kind":"shape","id":"sh/3698fuhs","slide":1,"name":"连接线_41","bbox":[816.64,255,2,12]}
+{"kind":"shape","id":"sh/47ip8zyd","slide":1,"name":"连接线_42","bbox":[592,267,224.64,2]}
+{"kind":"shape","id":"sh/p8rqh4zi","slide":1,"name":"连接线_43","bbox":[592,268,2,12]}
+{"kind":"shape","id":"sh/qt0ra9g3","slide":1,"name":"连接线_44","bbox":[421,280,341,2]}
+{"kind":"shape","id":"sh/rut8juxo","slide":1,"name":"流程箭头_45","bbox":[413,281,16,20]}
+{"kind":"shape","id":"sh/cv29czy9","slide":1,"name":"流程箭头_46","bbox":[754,281,16,20]}
+{"kind":"shape","id":"sh/dwbql4fu","slide":1,"name":"容器_47","bbox":[270.72,302,300.48,310]}
+{"kind":"shape","id":"sh/6dg7y5gz","slide":1,"name":"容器_48","bbox":[611.52,302,300.48,310]}
+{"kind":"textbox","id":"sh/7yp87ahk","slide":1,"name":"文字_49","text":"运输能力变化","textPreview":"运输能力变化","textChars":6,"textLines":1,"bbox":[280,310,281,31]}
+{"kind":"textbox","id":"sh/9svad8z2","slide":1,"name":"文字_50","text":"需求与到达变化","textPreview":"需求与到达变化","textChars":7,"textLines":1,"bbox":[621,310,281,31]}
+{"kind":"shape","id":"sh/8rmt43ih","slide":1,"name":"能力约束_51","bbox":[280,350,281,88]}
+{"kind":"textbox","id":"sh/nqdsby1w","slide":1,"name":"文字_52","text":"能力约束","textPreview":"能力约束","textChars":4,"textLines":1,"bbox":[288,357,265,27]}
+{"kind":"textbox","id":"sh/mp4b2t0b","slide":1,"name":"文字_53","text":"航道、船闸与船舶运力","textPreview":"航道、船闸与船舶运力","textChars":10,"textLines":1,"bbox":[291,390,259,40]}
+{"kind":"shape","id":"sh/xwfuhszy","slide":1,"name":"能力折减_54","bbox":[280,449,281,70]}
+{"kind":"textbox","id":"sh/wv6t8nid","slide":1,"name":"文字_55","text":"能力折减","textPreview":"能力折减","textChars":4,"textLines":1,"bbox":[288,456,265,27]}
+{"kind":"textbox","id":"sh/vuxsfih8","slide":1,"name":"文字_56","text":"折减幅度与持续时间","textPreview":"折减幅度与持续时间","textChars":9,"textLines":1,"bbox":[291,489,259,22]}
+{"kind":"shape","id":"sh/at4b6d0n","slide":1,"name":"时空差异_57","bbox":[280,530,281,70]}
+{"kind":"textbox","id":"sh/d0ba5oju","slide":1,"name":"文字_58","text":"时空差异","textPreview":"时空差异","textChars":4,"textLines":1,"bbox":[288,537,265,27]}
+{"kind":"textbox","id":"sh/cz2twji9","slide":1,"name":"文字_59","text":"能力恢复与瓶颈分布","textPreview":"能力恢复与瓶颈分布","textChars":9,"textLines":1,"bbox":[291,570,259,22]}
+{"kind":"shape","id":"sh/436tcjq5","slide":1,"name":"需求与到达_60","bbox":[621,350,281,88]}
+{"kind":"textbox","id":"sh/54falorq","slide":1,"name":"文字_61","text":"需求与到达","textPreview":"需求与到达","textChars":5,"textLines":1,"bbox":[629,357,265,27]}
+{"kind":"textbox","id":"sh/ihobat8z","slide":1,"name":"文字_62","text":"货类、流向与到达节奏\n区分需求与实际流量","textPreview":"货类、流向与到达节奏 | 区分需求与实际流量","textChars":20,"textLines":2,"bbox":[632,390,259,40]}
+{"kind":"shape","id":"sh/3ixsje9k","slide":1,"name":"常态波动_63","bbox":[621,449,281,70]}
+{"kind":"textbox","id":"sh/s7qtg3q1","slide":1,"name":"文字_64","text":"常态波动","textPreview":"常态波动","textChars":4,"textLines":1,"bbox":[629,456,265,27]}
+{"kind":"textbox","id":"sh/d8zup8rm","slide":1,"name":"文字_65","text":"周期、季节与突发变化","textPreview":"周期、季节与突发变化","textChars":10,"textLines":1,"bbox":[632,489,259,22]}
+{"kind":"shape","id":"sh/q5obet8b","slide":1,"name":"施工影响_66","bbox":[621,530,281,70]}
+{"kind":"textbox","id":"sh/r6xcny9w","slide":1,"name":"文字_67","text":"施工影响","textPreview":"施工影响","textChars":4,"textLines":1,"bbox":[629,537,265,27]}
+{"kind":"textbox","id":"sh/0bqtk3qd","slide":1,"name":"文字_68","text":"变化幅度、时滞与货类差异","textPreview":"变化幅度、时滞与货类差异","textChars":12,"textLines":1,"bbox":[632,570,259,22]}
+{"kind":"shape","id":"sh/1czut8ry","slide":1,"name":"连接线_69","bbox":[421,620,2,8]}
+{"kind":"shape","id":"sh/b61wj2t0","slide":1,"name":"连接线_70","bbox":[762,620,2,8]}
+{"kind":"shape","id":"sh/a5svqhsf","slide":1,"name":"连接线_71","bbox":[421,628,341,2]}
+{"kind":"shape","id":"sh/xs3elcb6","slide":1,"name":"流程箭头_72","bbox":[584,629,16,14]}
+{"kind":"shape","id":"sh/w7uds7al","slide":1,"name":"供需失配与运输服务响应_73","bbox":[270.72,650,641.28,121]}
+{"kind":"textbox","id":"sh/n21wf2t4","slide":1,"name":"文字_74","text":"供需失配与运输服务响应","textPreview":"供需失配与运输服务响应","textChars":11,"textLines":1,"bbox":[278.72,657,625.28,30]}
+{"kind":"textbox","id":"sh/m1svmxsj","slide":1,"name":"文字_75","text":"通过量与货物积压\n排队等待与船期偏移\n港航衔接、运输时效与交付可靠性","textPreview":"通过量与货物积压 | 排队等待与船期偏移 | 港航衔接、运输时效与交付可靠性","textChars":34,"textLines":3,"bbox":[281.72,693,619.28,70]}
+{"kind":"shape","id":"sh/94jehcbu","slide":1,"name":"流程箭头_76","bbox":[584,786,16,16]}
+{"kind":"shape","id":"sh/o3ado7a9","slide":1,"name":"研究模块_77","bbox":[251.52,804,679.68,399]}
+{"kind":"shape","id":"sh/7y5wrm98","slide":1,"name":"模块标题背景_78","bbox":[258.24,810.72,666.24,42]}
+{"kind":"textbox","id":"sh/6xcfy1sn","slide":1,"name":"模块标题_79","text":"② 运输组织调整与运行反馈","textPreview":"② 运输组织调整与运行反馈","textChars":13,"textLines":1,"bbox":[277,811,634,40]}
+{"kind":"shape","id":"sh/i9s3a9cv","slide":1,"name":"通航限制与运输服务变化_80","bbox":[270.72,862,641.28,70]}
+{"kind":"textbox","id":"sh/3a143ed0","slide":1,"name":"文字_81","text":"通航限制与运输服务变化","textPreview":"通航限制与运输服务变化","textChars":11,"textLines":1,"bbox":[278.72,869,625.28,26]}
+{"kind":"textbox","id":"sh/4balcjul","slide":1,"name":"文字_82","text":"待闸、船期与港航衔接变化","textPreview":"待闸、船期与港航衔接变化","textChars":12,"textLines":1,"bbox":[281.72,901,619.28,23]}
+{"kind":"shape","id":"sh/5cjm5ov6","slide":1,"name":"连接线_83","bbox":[592,931,2,12]}
+{"kind":"shape","id":"sh/u58369cj","slide":1,"name":"连接线_84","bbox":[421,943,341,2]}
+{"kind":"shape","id":"sh/v61kzed4","slide":1,"name":"流程箭头_85","bbox":[413,944,16,20]}
+{"kind":"shape","id":"sh/g7al8jup","slide":1,"name":"流程箭头_86","bbox":[754,944,16,20]}
+{"kind":"shape","id":"sh/h8jm1ova","slide":1,"name":"船舶组织调整_87","bbox":[270.72,966,300.48,119]}
+{"kind":"textbox","id":"sh/6h832pcn","slide":1,"name":"文字_88","text":"船舶组织调整","textPreview":"船舶组织调整","textChars":6,"textLines":1,"bbox":[278.72,973,284.48,30]}
+{"kind":"textbox","id":"sh/72hkvud8","slide":1,"name":"文字_89","text":"航次与待闸安排\n船型及通道变化\n港航作业衔接","textPreview":"航次与待闸安排 | 船型及通道变化 | 港航作业衔接","textChars":22,"textLines":3,"bbox":[281.72,1009,278.48,68]}
+{"kind":"shape","id":"sh/pwn61cfq","slide":1,"name":"货物发运调整_90","bbox":[611.52,966,300.48,119]}
+{"kind":"textbox","id":"sh/ovep87e5","slide":1,"name":"文字_91","text":"货物发运调整","textPreview":"货物发运调整","textChars":6,"textLines":1,"bbox":[619.52,973,284.48,30]}
+{"kind":"textbox","id":"sh/nu5oz2xk","slide":1,"name":"文字_92","text":"提前或延后发运\n到达节奏变化\n受限货流转移","textPreview":"提前或延后发运 | 到达节奏变化 | 受限货流转移","textChars":21,"textLines":3,"bbox":[622.52,1009,278.48,68]}
+{"kind":"shape","id":"sh/2twn6xwz","slide":1,"name":"连接线_93","bbox":[421,1091,2,8]}
+{"kind":"shape","id":"sh/1sn6xsfe","slide":1,"name":"连接线_94","bbox":[762,1091,2,8]}
+{"kind":"shape","id":"sh/07e54net","slide":1,"name":"连接线_95","bbox":[421,1099,341,2]}
+{"kind":"shape","id":"sh/f65ovix8","slide":1,"name":"流程箭头_96","bbox":[584,1100,16,14]}
+{"kind":"shape","id":"sh/e5wn2dw3","slide":1,"name":"组织调整对运行的反馈_97","bbox":[270.72,1120,641.28,70]}
+{"kind":"textbox","id":"sh/d436tsfi","slide":1,"name":"文字_98","text":"组织调整对运行的反馈","textPreview":"组织调整对运行的反馈","textChars":10,"textLines":1,"bbox":[278.72,1127,625.28,26]}
+{"kind":"textbox","id":"sh/s3u50nex","slide":1,"name":"文字_99","text":"更新运力、到达流与货类运输时序","textPreview":"更新运力、到达流与货类运输时序","textChars":15,"textLines":1,"bbox":[281.72,1159,619.28,23]}
+{"kind":"shape","id":"sh/1ovep8ru","slide":1,"name":"连接线_100","bbox":[239,1155,31.72,2]}
+{"kind":"shape","id":"sh/0nmdw3q9","slide":1,"name":"连接线_101","bbox":[239,394,2,761]}
+{"kind":"shape","id":"sh/zmdwny9o","slide":1,"name":"连接线_102","bbox":[239,394,15,2]}
+{"kind":"shape","id":"sh/el4vuts3","slide":1,"name":"流程箭头_103","bbox":[254,387,16,16]}
+{"kind":"shape","id":"sh/dkvelory","slide":1,"name":"连接线_104","bbox":[912,1155,35,2]}
+{"kind":"shape","id":"sh/cjmdsjad","slide":1,"name":"连接线_105","bbox":[947,394,2,761]}
+{"kind":"shape","id":"sh/ritwje9s","slide":1,"name":"连接线_106","bbox":[930,394,17,2]}
+{"kind":"shape","id":"sh/qhkvq9s7","slide":1,"name":"流程箭头_107","bbox":[912,387,18,16]}
+{"kind":"shape","id":"sh/xgfexsr2","slide":1,"name":"容器_108","bbox":[224,930,26,100]}
+{"kind":"shape","id":"sh/wf6x4nqh","slide":1,"name":"容器_109","bbox":[934,930,26,100]}
+{"kind":"textbox","id":"sh/ul0by58z","slide":1,"name":"文字_110","text":"运\n力\n反\n馈","textPreview":"运 | 力 | 反 | 馈","textChars":7,"textLines":4,"bbox":[225,930,25,100]}
+{"kind":"textbox","id":"sh/fm9crapk","slide":1,"name":"文字_111","text":"到\n达\n反\n馈","textPreview":"到 | 达 | 反 | 馈","textChars":7,"textLines":4,"bbox":[935,930,25,100]}
+{"kind":"shape","id":"sh/gnit0fq5","slide":1,"name":"流程箭头_112","bbox":[584,1205,16,14]}
+{"kind":"shape","id":"sh/horutk7q","slide":1,"name":"研究模块_113","bbox":[251.52,1221,679.68,734]}
+{"kind":"shape","id":"sh/6xgbu58n","slide":1,"name":"模块标题背景_114","bbox":[258.24,1227.72,666.24,42]}
+{"kind":"textbox","id":"sh/7ypsnap8","slide":1,"name":"模块标题_115","text":"③ 航运波动传播与动态响应模型构建","textPreview":"③ 航运波动传播与动态响应模型构建","textChars":17,"textLines":1,"bbox":[277,1228,634,40]}
+{"kind":"shape","id":"sh/szytwfqt","slide":1,"name":"波动传播与恢复特征_116","bbox":[270.72,1279,641.28,94]}
+{"kind":"textbox","id":"sh/t0rapk7e","slide":1,"name":"文字_117","text":"波动传播与恢复特征","textPreview":"波动传播与恢复特征","textChars":9,"textLines":1,"bbox":[278.72,1286,625.28,28]}
+{"kind":"textbox","id":"sh/qtkb69o7","slide":1,"name":"文字_118","text":"坝区多通道与上下游传播\n波动时滞、放大与恢复","textPreview":"坝区多通道与上下游传播 | 波动时滞、放大与恢复","textChars":22,"textLines":2,"bbox":[281.72,1320,619.28,45]}
+{"kind":"shape","id":"sh/rutczups","slide":1,"name":"流程箭头_119","bbox":[584,1379,16,14]}
+{"kind":"shape","id":"sh/nyl8rm54","slide":1,"name":"航运动态响应模型_120","bbox":[270.72,1398,641.28,98]}
+{"kind":"textbox","id":"sh/mxc7y1oj","slide":1,"name":"文字_121","text":"航运动态响应模型","textPreview":"航运动态响应模型","textChars":8,"textLines":1,"bbox":[278.72,1405,625.28,30]}
+{"kind":"textbox","id":"sh/90nqtwna","slide":1,"name":"文字_122","text":"能力、需求、排队与组织调整联动\n区分实际流量、积压与未满足需求","textPreview":"能力、需求、排队与组织调整联动 | 区分实际流量、积压与未满足需求","textChars":31,"textLines":2,"bbox":[281.72,1441,619.28,47]}
+{"kind":"shape","id":"sh/ozu90r6p","slide":1,"name":"连接线_123","bbox":[592,1496,2,12]}
+{"kind":"shape","id":"sh/b258v650","slide":1,"name":"连接线_124","bbox":[421,1508,341,2]}
+{"kind":"shape","id":"sh/a1wr21of","slide":1,"name":"流程箭头_125","bbox":[413,1509,16,20]}
+{"kind":"shape","id":"sh/x4nqxgn6","slide":1,"name":"流程箭头_126","bbox":[754,1509,16,20]}
+{"kind":"shape","id":"sh/w3e94b6l","slide":1,"name":"典型事件校准_127","bbox":[270.72,1532,300.48,120]}
+{"kind":"textbox","id":"sh/j658z65c","slide":1,"name":"文字_128","text":"典型事件校准","textPreview":"典型事件校准","textChars":6,"textLines":1,"bbox":[278.72,1539,284.48,30]}
+{"kind":"textbox","id":"sh/y5wr6lor","slide":1,"name":"文字_129","text":"能力与到达参数\n排队与组织调整参数\n参数来源与适用范围","textPreview":"能力与到达参数 | 排队与组织调整参数 | 参数来源与适用范围","textChars":27,"textLines":3,"bbox":[281.72,1575,278.48,69]}
+{"kind":"shape","id":"sh/gvypgb2p","slide":1,"name":"独立事件检验_130","bbox":[611.52,1532,300.48,120]}
+{"kind":"textbox","id":"sh/hw7qpg3a","slide":1,"name":"文字_131","text":"独立事件检验","textPreview":"独立事件检验","textChars":6,"textLines":1,"bbox":[619.52,1539,284.48,30]}
+{"kind":"textbox","id":"sh/utg7elkz","slide":1,"name":"文字_132","text":"通过量与等待时间\n船期偏移与传播时滞\n误差与模型修正","textPreview":"通过量与等待时间 | 船期偏移与传播时滞 | 误差与模型修正","textChars":26,"textLines":3,"bbox":[622.52,1575,278.48,69]}
+{"kind":"shape","id":"sh/fup8nqlk","slide":1,"name":"连接线_133","bbox":[239,1592,31.72,2]}
+{"kind":"shape","id":"sh/87epcb2t","slide":1,"name":"连接线_134","bbox":[239,1447,2,145]}
+{"kind":"shape","id":"sh/t87qlg3e","slide":1,"name":"连接线_135","bbox":[239,1447,15,2]}
+{"kind":"shape","id":"sh/65w7a1kn","slide":1,"name":"流程箭头_136","bbox":[254,1440,16,16]}
+{"kind":"shape","id":"sh/765oj6l8","slide":1,"name":"连接线_137","bbox":[912,1592,35,2]}
+{"kind":"shape","id":"sh/k3ep8r2x","slide":1,"name":"连接线_138","bbox":[947,1447,2,145]}
+{"kind":"shape","id":"sh/l4n6hw32","slide":1,"name":"连接线_139","bbox":[930,1447,17,2]}
+{"kind":"shape","id":"sh/pwjet8fy","slide":1,"name":"流程箭头_140","bbox":[912,1440,18,16]}
+{"kind":"shape","id":"sh/ovad03ed","slide":1,"name":"容器_141","bbox":[224,1492,26,100]}
+{"kind":"shape","id":"sh/nuhwryxs","slide":1,"name":"容器_142","bbox":[934,1492,26,100]}
+{"kind":"textbox","id":"sh/2t8vytw7","slide":1,"name":"文字_143","text":"参\n数\n修\n正","textPreview":"参 | 数 | 修 | 正","textChars":7,"textLines":4,"bbox":[225,1492,25,100]}
+{"kind":"textbox","id":"sh/x0jex8fu","slide":1,"name":"文字_144","text":"模\n型\n修\n正","textPreview":"模 | 型 | 修 | 正","textChars":7,"textLines":4,"bbox":[935,1492,25,100]}
+{"kind":"shape","id":"sh/czad4ne9","slide":1,"name":"连接线_145","bbox":[421,1659,2,8]}
+{"kind":"shape","id":"sh/by1wvixo","slide":1,"name":"连接线_146","bbox":[762,1659,2,8]}
+{"kind":"shape","id":"sh/axsv2dw3","slide":1,"name":"连接线_147","bbox":[421,1667,341,2]}
+{"kind":"shape","id":"sh/d4zulofq","slide":1,"name":"流程箭头_148","bbox":[584,1668,16,14]}
+{"kind":"shape","id":"sh/s36dsje5","slide":1,"name":"多情景传播与恢复响应_149","bbox":[270.72,1687,641.28,98]}
+{"kind":"textbox","id":"sh/i94b2pc3","slide":1,"name":"文字_150","text":"多情景传播与恢复响应","textPreview":"多情景传播与恢复响应","textChars":10,"textLines":1,"bbox":[278.72,1694,625.28,30]}
+{"kind":"textbox","id":"sh/3adsvud8","slide":1,"name":"文字_151","text":"不同施工强度、工期、负荷与通道条件\n传播范围、瓶颈转移与组织适应","textPreview":"不同施工强度、工期、负荷与通道条件 | 传播范围、瓶颈转移与组织适应","textChars":32,"textLines":2,"bbox":[281.72,1730,619.28,47]}
+{"kind":"shape","id":"sh/4bmt4zut","slide":1,"name":"流程箭头_152","bbox":[584,1793,16,14]}
+{"kind":"shape","id":"sh/5cfaxkve","slide":1,"name":"供需失配与阈值_153","bbox":[270.72,1815,190.72,131]}
+{"kind":"textbox","id":"sh/qdob6pcz","slide":1,"name":"文字_154","text":"供需失配与阈值","textPreview":"供需失配与阈值","textChars":7,"textLines":1,"bbox":[278.72,1822,174.72,32]}
+{"kind":"textbox","id":"sh/ryxszudk","slide":1,"name":"文字_155","text":"持续积压条件\n波动放大阈值\n扰动累积效应","textPreview":"持续积压条件 | 波动放大阈值 | 扰动累积效应","textChars":20,"textLines":3,"bbox":[281.72,1860,168.72,78]}
+{"kind":"shape","id":"sh/sz6t8zu5","slide":1,"name":"积压消散与恢复_156","bbox":[496,1815,190.72,131]}
+{"kind":"textbox","id":"sh/d0fa14vq","slide":1,"name":"文字_157","text":"积压消散与恢复","textPreview":"积压消散与恢复","textChars":7,"textLines":1,"bbox":[504,1822,174.72,32]}
+{"kind":"textbox","id":"sh/6hkru5cv","slide":1,"name":"文字_158","text":"积压消散速度\n运输服务恢复时间\n累计服务损失","textPreview":"积压消散速度 | 运输服务恢复时间 | 累计服务损失","textChars":22,"textLines":3,"bbox":[507,1860,168.72,78]}
+{"kind":"shape","id":"sh/72tsnadg","slide":1,"name":"响应差异与边界_159","bbox":[721.28,1815,190.72,131]}
+{"kind":"textbox","id":"sh/bm98v6t8","slide":1,"name":"文字_160","text":"响应差异与边界","textPreview":"响应差异与边界","textChars":7,"textLines":1,"bbox":[729.28,1822,174.72,32]}
+{"kind":"textbox","id":"sh/al0721sn","slide":1,"name":"文字_161","text":"关键影响因素\n货类与通道差异\n模型适用范围","textPreview":"关键影响因素 | 货类与通道差异 | 模型适用范围","textChars":21,"textLines":3,"bbox":[732.28,1860,168.72,78]}
+{"kind":"shape","id":"sh/x8rqxgby","slide":1,"name":"施工情景与能力变化_162","bbox":[1027.2,145,218.88,132]}
+{"kind":"textbox","id":"sh/cnip4bad","slide":1,"name":"文字_163","text":"施工情景与能力变化","textPreview":"施工情景与能力变化","textChars":9,"textLines":1,"bbox":[1035.2,152,202.88,42]}
+{"kind":"textbox","id":"sh/nipormtw","slide":1,"name":"文字_164","text":"通航约束与能力折减\n持续时间与恢复过程","textPreview":"通航约束与能力折减 | 持续时间与恢复过程","textChars":19,"textLines":2,"bbox":[1038.2,200,196.88,69]}
+{"kind":"shape","id":"sh/2hg7yhsb","slide":1,"name":"需求与到达变化_165","bbox":[1027.2,357,218.88,132]}
+{"kind":"textbox","id":"sh/pk7qtwb2","slide":1,"name":"文字_166","text":"需求与到达变化","textPreview":"需求与到达变化","textChars":7,"textLines":1,"bbox":[1035.2,364,202.88,42]}
+{"kind":"textbox","id":"sh/ojyp0rah","slide":1,"name":"文字_167","text":"常态需求特征\n施工影响幅度与时滞","textPreview":"常态需求特征 | 施工影响幅度与时滞","textChars":16,"textLines":2,"bbox":[1038.2,412,196.88,69]}
+{"kind":"shape","id":"sh/7et83qt0","slide":1,"name":"运行与服务响应_168","bbox":[1027.2,624,218.88,147]}
+{"kind":"textbox","id":"sh/mdk7alsv","slide":1,"name":"文字_169","text":"运行与服务响应","textPreview":"运行与服务响应","textChars":7,"textLines":1,"bbox":[1035.2,631,202.88,42]}
+{"kind":"textbox","id":"sh/4ju5onqd","slide":1,"name":"文字_170","text":"通过量、积压与等待\n船期、时效与可靠性","textPreview":"通过量、积压与等待 | 船期、时效与可靠性","textChars":19,"textLines":2,"bbox":[1038.2,679,196.88,84]}
+{"kind":"shape","id":"sh/5k3mxsri","slide":1,"name":"组织调整与反馈_171","bbox":[1027.2,966,218.88,168]}
+{"kind":"textbox","id":"sh/ixcnmd87","slide":1,"name":"文字_172","text":"组织调整与反馈","textPreview":"组织调整与反馈","textChars":7,"textLines":1,"bbox":[1035.2,973,202.88,42]}
+{"kind":"textbox","id":"sh/3yl4vi9s","slide":1,"name":"文字_173","text":"航次与发运调整\n运力与到达变化\n调整幅度与响应时滞","textPreview":"航次与发运调整 | 运力与到达变化 | 调整幅度与响应时滞","textChars":25,"textLines":3,"bbox":[1038.2,1021,196.88,105]}
+{"kind":"shape","id":"sh/sne5snq9","slide":1,"name":"传播与恢复规律_174","bbox":[1027.2,1279,218.88,138]}
+{"kind":"textbox","id":"sh/donm1sru","slide":1,"name":"文字_175","text":"传播与恢复规律","textPreview":"传播与恢复规律","textChars":7,"textLines":1,"bbox":[1035.2,1286,202.88,42]}
+{"kind":"textbox","id":"sh/qlcnqd83","slide":1,"name":"文字_176","text":"传播范围与时滞\n放大阈值与恢复过程","textPreview":"传播范围与时滞 | 放大阈值与恢复过程","textChars":17,"textLines":2,"bbox":[1038.2,1334,196.88,75]}
+{"kind":"shape","id":"sh/rm54zi9o","slide":1,"name":"响应模型与参数_177","bbox":[1027.2,1532,218.88,140]}
+{"kind":"textbox","id":"sh/0re5w7q5","slide":1,"name":"文字_178","text":"响应模型与参数","textPreview":"响应模型与参数","textChars":7,"textLines":1,"bbox":[1035.2,1539,202.88,42]}
+{"kind":"textbox","id":"sh/1snm5crq","slide":1,"name":"文字_179","text":"航运动态响应模块\n运行参数与适用范围","textPreview":"航运动态响应模块 | 运行参数与适用范围","textChars":18,"textLines":2,"bbox":[1038.2,1587,196.88,77]}
+{"kind":"shape","id":"sh/pcvidwfi","slide":1,"name":"模型检验结果_180","bbox":[1027.2,1815,218.88,131]}
+{"kind":"textbox","id":"sh/obmhkrex","slide":1,"name":"文字_181","text":"模型检验结果","textPreview":"模型检验结果","textChars":6,"textLines":1,"bbox":[1035.2,1822,202.88,42]}
+{"kind":"textbox","id":"sh/nat0bmxc","slide":1,"name":"文字_182","text":"运行指标误差\n典型情景适用性","textPreview":"运行指标误差 | 典型情景适用性","textChars":14,"textLines":2,"bbox":[1038.2,1870,196.88,68]}
+{"kind":"shape","id":"sh/29kzihg7","slide":1,"name":"流程箭头_183","bbox":[1129,295,16,44]}
+{"kind":"shape","id":"sh/18bi9cfm","slide":1,"name":"流程箭头_184","bbox":[1129,505,16,101]}
+{"kind":"shape","id":"sh/0n2hgry1","slide":1,"name":"流程箭头_185","bbox":[1129,789,16,160]}
+{"kind":"shape","id":"sh/fmt07mxg","slide":1,"name":"流程箭头_186","bbox":[1129,1152,16,109]}
+{"kind":"shape","id":"sh/elkzehgv","slide":1,"name":"流程箭头_187","bbox":[1129,1437,16,77]}
+{"kind":"shape","id":"sh/tkby5cfa","slide":1,"name":"流程箭头_188","bbox":[1129,1692,16,105]}
+{"kind":"textbox","id":"sh/sjihc7yp","slide":1,"name":"研究边界_189","text":"研究边界：航运能力、需求、拥堵、运输组织与服务响应","textPreview":"研究边界：航运能力、需求、拥堵、运输组织与服务响应","textChars":25,"textLines":1,"bbox":[251.52,1970,679.68,36]}
+{"kind":"notes","id":"nt/r3emq3","slide":1,"text":"第三页为研究范围收缩后的技术路线，第一、二页原图保留。根据用户要求，删去可见研究方法、算法名称和工作基础及子课题协同内容，缩短全图文字。子课题三仅研究施工扰动下能力、需求、排队拥堵、运输组织、时效可靠性、传播与恢复。第二部分改为运输组织调整与运行反馈，使用记录或预设情景刻画航次、待闸、船型、通道、发运时点与到达节奏变化，分析其运行影响，不承担独立运价预测、成本收益评估、复杂主体行为选择建模或多式联运优化。建议的任务衔接为：子课题一统筹公共市场与运行数据；子课题二分析成本、运价和市场行为在施工—航运—产业全链条中的传导机理；子课题四结合场景开展港航经营及产业、区域经济影响分析；子课题五依据前述研究集成必要的市场—产业反馈并开展整体验证。该分工是本次收缩范围的建议，需要课题组落实，不表述为其他子课题已接受的任务。第三页不把运价、收益或价格驱动行为作为子课题三的独立研究任务。"}
